@@ -1,0 +1,40 @@
+# 必要のない一時ファイルやディレクトリ
+/.idea
+/.vscode
+.DS_Store
+.env
+.phpunit.result.cache
+/vendor
+/node_modules
+/log
+/cache
+
+# composer.lock ファイルは必要です
+!/composer.lock
+
+# ログやキャッシュの例外
+!/log/.gitkeep
+!/cache/.gitkeep
+
+
+# MySQL関連のファイル
+*.sql
+*.dump
+*.gz
+*.zip
+*.tar
+*.rar
+/data
+/log
+/ib_logfile*
+/*.pid
+
+# テーブル作成用のSQL
+!/initdb.d/create-table.sql
+
+# 画像・PDF
+*.pdf
+*.jpeg
+*.png
+
+www/html/~g234201/api/write_login_history/login_history.json

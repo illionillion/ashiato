@@ -1,0 +1,39 @@
+version: '3'
+services:
+  web:
+    build: .
+    container_name: web
+    volumes:
+      - ./www/:/var/www/html
+    privileged: true
+    ports:
+      - ${PHP_PORT}:80
+    depends_on:
+      - db
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+  db:
+    image: mysql:latest
+    container_name: db
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d # DBの初期データ
+      - ./config/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=password # rootユーザーのパスワード
+      - TZ=Asia/Tokyo
+    ports:
+      - ${MYSQL_PORT}:3306
+  phpmyadmin:
+    container_name: admin
+    image: phpmyadmin/phpmyadmin:latest
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db #mysqlサービス名を指定
+    ports:
+      - ${ADMIN_PORT}:80
+    depends_on:
+      - db

@@ -18,6 +18,8 @@ session_check();
 
 <body>
     <main class="container row m-auto">
+        <h1>ユーザー名: <?= $_SESSION["user_name"] ?></h1>
+        <a href="/api/signout">サインアウト</a>
     </main>
 </body>
 

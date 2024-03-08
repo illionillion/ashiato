@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 }
 
 $username = $_POST["user-name"];
-$password = $_POST["password"];
+$password = $_POST["user-password"];
 
 if (!isset($username) || empty($username)) {
     header("Location: /signin?error=1");

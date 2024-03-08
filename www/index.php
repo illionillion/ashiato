@@ -1,4 +1,6 @@
 <?php
+include "./lib/session_check.php";
+session_check();
 ?>
 <!DOCTYPE html>
 <html lang="ja">

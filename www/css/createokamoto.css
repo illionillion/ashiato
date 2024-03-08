@@ -1,0 +1,28 @@
+/* *{
+    outline: 1px solid;
+}
+
+form.row{
+    width: 50% !important;
+    @media (max-width: 767px) {
+        width: 100% !important;
+    }
+} */
+
+.create {
+  color: #a9ceec;
+  padding: 20px;
+}
+
+label {
+  color: #a9ceec;
+}
+
+.tennnouzi {
+  color: white;
+  background-color: #a9ceec;
+}
+.nanpa {
+  color: white;
+  background-color: #a9ceec;
+}

@@ -13,14 +13,15 @@ session_check();
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/createokamoto.css" />
   <script src="/js/main.js"></script>
   <script src="/js/create-bookmark.js"></script>
 </head>
 
 <body>
   <main class="container d-flex justify-content-center">
-    <form action="/api/create-bookmark/index.php" class="row w-50" method="POST">
-      <h1 class="text-center">しおり作成</h1>
+    <form action="/api/create-bookmark/index.php" class="row" method="POST">
+      <h1 class="create text-center">しおり作成</h1>
       <div class="w-100 form-label">
         <label for="bookmark-name" class="w-100 mb-1">しおり名</label>
         <input type="text" id="bookmark-name" name="bookmark-name" class="form-control w-100" placeholder="しおり名を入力" />
@@ -35,7 +36,7 @@ session_check();
         <div class="accordion" id="accordionPanelsStayOpenExample" class="d-none">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+              <button class="tennnouzi accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
                 天王寺
               </button>
             </h2>
@@ -69,7 +70,7 @@ session_check();
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              <button class="nanpa accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                 難波
               </button>
             </h2>

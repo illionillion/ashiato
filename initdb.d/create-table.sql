@@ -33,6 +33,8 @@ CREATE TABLE user (
 INSERT INTO user (user_name, password, email)
 VALUES ('JohnDoe', SHA2('password', 256), 'john-doe@example.com');
 
+INSERT INTO user (user_name, password, email)
+VALUES ('JohnDoe2', SHA2('password', 256), 'john-doe2@example.com');
 -- -- 蔵書のカテゴリ
 -- CREATE TABLE book_category (
 --     book_category_id INT PRIMARY KEY AUTO_INCREMENT,

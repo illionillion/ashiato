@@ -17,20 +17,20 @@ CREATE TABLE bookmark (
     user_id INT NOT NULL,
     created_at DATETIME DEFAULT NOW(),
     FOREIGN KEY (user_id) REFERENCES user(user_id)
-)
+);
 
 -- しおり内のコンテンツ
 CREATE TABLE bookmark_content (
     bookmark_content_id INT PRIMARY KEY AUTO_INCREMENT,
     bookmark_content_name VARCHAR(255) NOT NULL,
     bookmark_content_address VARCHAR(255) NOT NULL,
-    bookmark_content_comment VARCHAR(255), NOT NULL
+    bookmark_content_comment VARCHAR(255) NOT NULL,
     bookmark_content_price INT NOT NULL,
     bookmark_id INT NOT NULL,
     bookmark_instagram_url VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT NOW(),
     FOREIGN KEY (bookmark_id) REFERENCES bookmark(bookmark_id)
-)
+);
 
 -- しおり内コンテンツの画像
 CREATE TABLE bookmark_content_image (
@@ -39,7 +39,7 @@ CREATE TABLE bookmark_content_image (
     created_at DATETIME DEFAULT NOW(),
     bookmark_content_id INT NOT NULL,
     FOREIGN KEY (bookmark_content_id) REFERENCES bookmark_content(bookmark_content_id)
-)
+);
 
 -- -- 日記テーブル
 -- CREATE TABLE diary (

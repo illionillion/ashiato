@@ -83,6 +83,12 @@ session_check();
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          <div class="staytime">
+            <p class="abouts">過ごした時間</p>
+          </div>
+          <div class="usedprice">
+            <p class="abouts">使ったお金</p>
+          </div>
           <div class="address">
             <p class="abouts">住所</p>
             <p class="address-text"></p>

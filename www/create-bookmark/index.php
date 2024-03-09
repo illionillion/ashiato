@@ -63,6 +63,7 @@ session_check();
         <div class="accordion-body">
           <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
+              <!--
               <div class="carousel-item active">
                 <img src="/img/sample1.jpg" class="d-block w-100" alt="..." />
               </div>
@@ -71,7 +72,7 @@ session_check();
               </div>
               <div class="carousel-item">
                 <img src="/img/sample1.jpg" class="d-block w-100" alt="..." />
-              </div>
+              </div>-->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -94,8 +95,15 @@ session_check();
             <p class="abouts">交通費</p>
             <p class="price-text"></p>
           </div>
+          <div class="movetime">
+            <p class="abouts">移動時間</p>
+          </div>
+          <div class="howmove">
+            <p class="abouts">移動手段</p>
+          </div>
         </div>
       </div>
+    </div>
     </div>
   </template>
 </body>

@@ -36,7 +36,8 @@ header {
 }
 
 @media (max-width: 767px) {
-  .ready, .in input {
+  .ready,
+  .in input {
     width: 100%;
   }
 }

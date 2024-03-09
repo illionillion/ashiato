@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/signokamoto.css">
+    <link rel="stylesheet" href="/css/signup.css">
     <script src="/js/main.js"></script>
 </head>
 
@@ -29,13 +29,13 @@
         </div>
         <form class="in" action="/api/signup/index.php" method="post">
 
-            <input type="text" name="user-name" placeholder="ユーザーネームを入力">
+            <input type="text" name="user-name" class="px-2" placeholder="ユーザーネームを入力">
 
-            <input type="email" name="user-email" placeholder="メールアドレスを入力">
+            <input type="email" name="user-email" class="px-2" placeholder="メールアドレスを入力">
 
-            <input type="password" name="user-password" placeholder="パスワード">
+            <input type="password" name="user-password" class="px-2" placeholder="パスワード">
 
-            <input class="go" type="submit" value="送信">
+            <input class="go" type="submit" class="px-2" value="送信">
         </form>
         <p class="error">
             <?php

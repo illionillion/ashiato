@@ -1,3 +1,38 @@
+let images = [];
+
+const main = () => {
+  document.getElementById("image-input").addEventListener("change", (e) => {
+    if (e.target.files.length === 0) return;
+    // images = e.target.file;
+    // console.log(e.target.file);
+    const preview = document.getElementById("preview");
+    preview.innerHTML = "";
+    const template = document.getElementById("slider-template");
+    const clone = template.content.cloneNode(true);
+    preview.appendChild(clone);
+    const slider = document.querySelector("#preview .carousel-inner");
+    Object.values(e.target.files).forEach((file, index) => {
+      const imageObj = new Image();
+      imageObj.src = URL.createObjectURL(file);
+      console.log(imageObj);
+      images.push(imageObj)
+      const slide = document.createElement("div");
+      slide.classList.add("carousel-item", "h-100", index === 0 && "active");
+      imageObj.classList.add(
+        "d-block",
+        "img-thumbnail",
+        "w-100",
+        "h-100",
+        "object-fit-contain"
+      );
+      slide.appendChild(imageObj);
+      slider.appendChild(slide);
+    });
+  });
+};
+
+window.addEventListener("load", main);
+
 window.addEventListener("load", () => {
   let placeCount = 0;
   document.querySelector("#placeAddBtn").addEventListener("click", () => {
@@ -59,6 +94,32 @@ window.addEventListener("load", () => {
     const clone = template.content.cloneNode(true);
     // previewにスライダーを挿入
     accordion.appendChild(clone);
+    // スライダーの中のスライドを入れる部分を取得
+    // const slider = document.querySelector("#preview .carousel-inner");
+    const slider = document.querySelector(`.accordion-item:nth-child(${placeCount + 1}) .carousel-inner`);
+    // ファイルをループを回して取り出してスライダーに挿入
+    Object.values(images).forEach((image, index) => {
+      
+      //   div作成
+      const slide = document.createElement("div");
+      //   クラス追加
+      slide.classList.add(
+        "carousel-item",
+        "h-100",
+        index === 0 && "active" // 最初の画像のみ「active」クラスをつける
+      );
+      // imageObj.classList.add(
+      //   "d-block",
+      //   "img-thumbnail",
+      //   "w-100",
+      //   "h-100",
+      //   "object-fit-contain"
+      // );
+      //   スライドに画像マウント
+      slide.appendChild(image);
+      //   スライダーにスライドマウント
+      slider.appendChild(slide);
+    });
     // id変更
     const accordionCollapse = document.querySelector(
       `.accordion-item:nth-child(${placeCount + 1}) .accordion-collapse`
@@ -110,6 +171,8 @@ window.addEventListener("load", () => {
     );
     carouselNext.dataset.bsTarget = `#carousel-${placeCount + 1}`;
 
+    const preview = document.getElementById("preview");
+    preview.innerHTML = "";
     placeCount++;
   });
 });

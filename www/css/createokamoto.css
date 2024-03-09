@@ -27,7 +27,9 @@ label {
 }
 
 .address {
-  padding: 20px;
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .address p {
@@ -37,7 +39,6 @@ label {
 .comment {
   margin: 0 20px;
   padding: 20px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -51,10 +52,31 @@ label {
 }
 
 .price {
-  padding: 20px;
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .price p {
+  display: inline-block;
+}
+
+.movetime {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.movetime p {
+  display: inline-block;
+}
+
+.howmove {
+  margin: 0 20px;
+  padding: 20px 0;
+}
+
+.howmove p {
   display: inline-block;
 }
 

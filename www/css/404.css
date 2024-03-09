@@ -1,0 +1,65 @@
+.pic {
+    float: right;
+    width: 50%
+    
+
+}
+
+.header {
+    color: #6e0606;
+}
+
+.pos {
+    color: #6e0606;
+}
+
+.background {
+}
+
+body {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100dvh;
+}
+
+body {
+    position: relative;
+    line-height: 1.4;
+    padding: 0.25em 1em;
+    display: inline-block;
+}
+
+body:before,
+body:after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    
+    position: absolute;
+    display: inline-block;
+}
+
+.bg-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100dvh;
+    z-index: -1;
+}
+
+.message {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -20,11 +20,12 @@
                     </div>
                     <div class="w-100 form-label">
                         <label for="image-input" class="text-center">画像を追加</label>
-                        <input type="file" name="" id="image-input" multiple accept="image/png, image/jpeg"
+                        <!-- <input type="file" name="" id="image-input" multiple accept="image/png, image/jpeg" -->
+                        <input type="file" name="" id="image-input" accept="image/png, image/jpeg"
                             class="d-none" />
                         <div id="preview"></div>
                     </div>
-                    <template id="slider-template">
+                    <!-- <template id="slider-template">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title"></div>
@@ -46,33 +47,33 @@
                                 </div>
                             </div>
                         </div>
-                    </template>
+                    </template> -->
                     <div class="w-100 form-label">
                         <label for="place-comment" class="w-100 mb-1">ひとこと</label>
-                        <textarea type="text" id="place-comment" name="place-comment" class="form-control w-100"
+                        <textarea id="place-comment" name="place-comment" class="form-control w-100"
                             placeholder="ひとことコメントを入力"></textarea>
                     </div>
                     <div class="w-100 form-label">
-                        <label for="staytime" class="w-100 mb-1">滞在時間</label>
-                        <input type="number" id="staytime" name="staytime" class="form-control w-100" placeholder="**時間" />
-                        <input type="number" id="staytime" name="staytime" class="form-control w-100" placeholder="**分" />
+                        <label for="" class="w-100 mb-1">滞在時間</label>
+                        <input type="number" id="stay-time-h" name="stay-time-h" class="form-control w-100" placeholder="**時間" />
+                        <input type="number" id="stay-time-m" name="stay-time-m" class="form-control w-100" placeholder="**分" />
                     </div>
                     <div class="w-100 form-label">
-                        <label for="used" class="w-100 mb-1">使ったお金</label>
-                        <input type="number" id="used" name="used" class="form-control w-100" placeholder="**円" />
+                        <label for="used-money" class="w-100 mb-1">使ったお金</label>
+                        <input type="number" id="used-money" name="used-money" class="form-control w-100" placeholder="**円" />
                     </div>
                     <div class="w-100 form-label">
                         <label for="expenses" class="w-100 mb-1">交通費</label>
                         <input type="number" id="expenses" name="expenses" class="form-control w-100" placeholder="**円" />
                     </div>
                     <div class="w-100 form-label">
-                        <label for="movetime" class="w-100 mb-1">移動時間</label>
-                        <input type="number" id="movetime" name="movetime" class="form-cotrol w-100" placeholder="**時間" />
-                        <input type="number" id="movetime" name="movetime" class="form-cotrol w-100" placeholder="**分" />
+                        <label for="" class="w-100 mb-1">移動時間</label>
+                        <input type="number" id="move-time-h" name="move-time-h" class="form-control w-100" placeholder="**時間" />
+                        <input type="number" id="move-time-m" name="move-time-m" class="form-control w-100" placeholder="**分" />
                     </div>
                     <div class="w-100 form-label">
-                        <label for="howmove" class="w-100 mb-1">移動手段</label>
-                        <textarea type="text" id="howmove" name="howmove" class="form-control w-100"
+                        <label for="how-move" class="w-100 mb-1">移動手段</label>
+                        <textarea id="how-move" name="how-move" class="form-control w-100"
                             placeholder="移動手段を入力"></textarea>
                     </div>
                 </div>

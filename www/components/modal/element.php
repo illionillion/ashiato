@@ -17,7 +17,7 @@
                     </div>
                     <div class="w-100 form-label">
                         <label for="place-comment" class="w-100 mb-1">ひとこと</label>
-                        <textarea type="text" id="place-comment" name="place-comment" class="form-control w-100"></textarea>
+                        <textarea type="text" id="place-comment" name="place-comment" class="form-control w-100" placeholder="ひとことコメントを入力"></textarea>
                     </div>
                     <div class="w-100 form-label">
                         <label for="expenses" class="w-100 mb-1">交通費</label>

@@ -12,13 +12,6 @@ window.addEventListener("load", () => {
       return;
     }
 
-    console.log({
-      place_name,
-      place_address,
-      place_comment,
-      expenses,
-    });
-
     // HTMLにhiddenで追加
     const place_name_input = document.createElement("input");
     place_name_input.name = `bookmark_content[${placeCount}][${
@@ -56,18 +49,67 @@ window.addEventListener("load", () => {
     document.getElementById("expenses").value = "";
     document.querySelector("#addPlaceModal .btn-close").click();
 
-    // // アコーディオン追加
-    // const accordion = document.getElementById('accordionPanelsStayOpenExample')
-    // // スライダーのテンプレートのタグを取得
-    // const template = document.getElementById("accordion-item-template");
-    // // 複製
-    // const clone = template.content.cloneNode(true);
-    // // previewにスライダーを挿入
-    // accordion.appendChild(clone);
-    // // スライダーの中のスライドを入れる部分を取得
-    // const accordion_inner = document.querySelector("#preview .carousel-inner");
+    // アコーディオン追加
+    const accordion = document.querySelector(".accordion");
+    accordion.classList.remove("d-none");
+    document.querySelector(".accordion-message").classList.add("d-none");
+    // スライダーのテンプレートのタグを取得
+    const template = document.getElementById("accordion-item-template");
+    // 複製
+    const clone = template.content.cloneNode(true);
+    // previewにスライダーを挿入
+    accordion.appendChild(clone);
+    // id変更
+    const accordionCollapse = document.querySelector(
+      `.accordion-item:nth-child(${placeCount + 1}) .accordion-collapse`
+    );
+    accordionCollapse.id = `panelsStayOpen-${placeCount + 1}`;
+    // タイトル変更
+    const title = document.querySelector(
+      `.accordion-item:nth-child(${
+        placeCount + 1
+      }) .accordion-header .accordion-button`
+    );
+    title.textContent = place_name;
+    title.dataset.bsTarget = `#panelsStayOpen-${placeCount + 1}`;
+    title.setAttribute("aria-controls", `panelsStayOpen-${placeCount + 1}`);
+    // 住所変更
+    const address = document.querySelector(
+      `.accordion-item:nth-child(${
+        placeCount + 1
+      }) .accordion-body .address-text`
+    );
+    address.textContent = place_address;
+    // コメント変更
+    const comment = document.querySelector(
+      `.accordion-item:nth-child(${
+        placeCount + 1
+      }) .accordion-body .comment-text`
+    );
+    comment.textContent = place_comment;
+    // コメント変更
+    const price = document.querySelector(
+      `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .price-text`
+    );
+    price.textContent = `${expenses}円`;
+    // カルーセル
+    const carousel = document.querySelector(
+      `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .carousel`
+    );
+    carousel.id = `carousel-${placeCount + 1}`;
+    const carouselPrev = document.querySelector(
+      `.accordion-item:nth-child(${
+        placeCount + 1
+      }) .accordion-body .carousel .carousel-control-prev`
+    );
+    carouselPrev.dataset.bsTarget = `#carousel-${placeCount + 1}`;
+    const carouselNext = document.querySelector(
+      `.accordion-item:nth-child(${
+        placeCount + 1
+      }) .accordion-body .carousel .carousel-control-next`
+    );
+    carouselNext.dataset.bsTarget = `#carousel-${placeCount + 1}`;
 
     placeCount++;
   });
 });
-// // アコーディオン追加

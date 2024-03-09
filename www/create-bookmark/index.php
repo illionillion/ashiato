@@ -29,75 +29,31 @@ session_check();
       </div>
       <div class="w-100 form-label">
         <label for="bookmark-description" class="w-100 mb-1">概要</label>
-        <textarea type="text" id="bookmark-description" name="bookmark-description" class="form-control w-100"></textarea>
+        <textarea type="text" id="bookmark-description" name="bookmark-description" class="form-control w-100" placeholder="概要を入力"></textarea>
       </div>
       <div class="w-100 form-label">
         <label for="">あしあと</label>
         <div id="place" class="d-none"></div>
-        <div class="accordion" id="accordionPanelsStayOpenExample" class="d-none">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="tennnouzi accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                天王寺
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div id="carouselExample" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="/img/sample1.jpg" class="d-block w-100" alt="..." />
-                    </div>
-                    <div class="carousel-item">
-                      <img src="/img/sample1.jpg" class="d-block w-100" alt="..." />
-                    </div>
-                    <div class="carousel-item">
-                      <img src="/img/sample1.jpg" class="d-block w-100" alt="..." />
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-                <div>住所</div>
-                <div>楽しかった</div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="nanpa accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                難波
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-              <div class="accordion-body">居酒屋</div>
-            </div>
-          </div>
+        <div class="accordion" id="" class="">
         </div>
-      </div>
-      <div class="w-100 text-center">
-        <input type="button" class="btn btn-outline-primary" value="場所追加" data-bs-toggle="modal" data-bs-target="#addPlaceModal" />
-        <input type="submit" class="btn btn-outline-primary" value="作成" />
-      </div>
+        <div class="accordion-message text-danger">あしあとが登録されていません</div>
+        <div class="w-100 text-center py-3">
+          <input type="button" class="btn btn-outline-primary" value="場所追加" data-bs-toggle="modal" data-bs-target="#addPlaceModal" />
+          <input type="submit" class="btn btn-outline-primary" value="作成" />
+        </div>
     </form>
     <!-- Modal -->
     <?php
-      $modal = new Modal("addPlaceModal");
-      $modal->render();
+    $modal = new Modal("addPlaceModal");
+    $modal->render();
     ?>
   </main>
   <template id="accordion-item-template">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne"></button>
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="false" aria-controls=""></button>
       </h2>
-      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+      <div id="" class="accordion-collapse collapse">
         <div class="accordion-body">
           <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
@@ -120,8 +76,18 @@ session_check();
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <div>最高</div>
-          <div>900円</div>
+          <div class="address">
+            <p>住所</p>
+            <p class="address-text"></p>
+          </div>
+          <div class="comment">
+            <p>コメント</p>
+            <pre class="comment-text"></pre>
+          </div>
+          <div class="price">
+            <p>交通費</p>
+            <p class="price-text"></p>
+          </div>
         </div>
       </div>
     </div>

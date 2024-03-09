@@ -2,13 +2,16 @@ header {
   width: 50%;
   height: 45px;
   margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
 .title {
-  float: left;
   color: #a9ceec;
 }
 .rogo {
-  float: right;
   color: #a9ceec;
 }
 
@@ -30,6 +33,12 @@ header {
   border-radius: 10px;
   line-height: 40px;
   font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .ready, .in input {
+    width: 100%;
+  }
 }
 
 .go {

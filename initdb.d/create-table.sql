@@ -44,26 +44,6 @@ CREATE TABLE bookmark_content_image (
     FOREIGN KEY (bookmark_content_id) REFERENCES bookmark_content(bookmark_content_id)
 );
 
--- -- 日記テーブル
--- CREATE TABLE diary (
---     diary_id INT PRIMARY KEY AUTO_INCREMENT,
---     diary_title VARCHAR(255) NOT NULL,
---     diary_content TEXT NOT NULL,
---     user_id INT NOT NULL,
---     created_at DATETIME DEFAULT NOW(),
---     FOREIGN KEY (user_id) REFERENCES user(user_id)
--- );
-
--- -- 日記画像テーブル
--- CREATE TABLE diary_image (
---     image_id INT PRIMARY KEY AUTO_INCREMENT,
---     diary_id INT NOT NULL,
---     diary_image_data LONGBLOB NOT NULL,
---     created_at DATETIME DEFAULT NOW(),
---     FOREIGN KEY (diary_id) REFERENCES diary(diary_id)
--- );
-
-
 -- 初期データ（初回導入時はこれを実行してシステムにログインできるようにする）
 INSERT INTO user (user_name, password, email)
 VALUES ('JohnDoe', SHA2('password', 256), 'john-doe@example.com');

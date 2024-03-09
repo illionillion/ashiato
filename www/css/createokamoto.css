@@ -3,9 +3,9 @@
 }
 
 */
-form.row{
-    width: 100%;
-    max-width: 75vw;
+form.row {
+  width: 100%;
+  max-width: 75vw;
 }
 
 .create {
@@ -24,4 +24,40 @@ label {
 .nanpa {
   color: white;
   background-color: #a9ceec;
+}
+
+.address {
+  padding: 20px;
+}
+
+.address p {
+  display: inline-block;
+}
+
+.comment {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.comment p {
+  display: inline-block;
+}
+.comment pre {
+  width: 100%;
+  white-space: pre-line;
+  word-break: break-all;
+}
+
+.price {
+  padding: 20px;
+}
+
+.price p {
+  display: inline-block;
+}
+
+.abouts {
+  width: 100px;
 }

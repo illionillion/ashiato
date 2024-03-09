@@ -11,8 +11,11 @@ session_check();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>あしあと</title>
   <!-- BootStrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/createokamoto.css" />
   <script src="/js/main.js"></script>
@@ -29,7 +32,8 @@ session_check();
       </div>
       <div class="w-100 form-label">
         <label for="bookmark-description" class="w-100 mb-1">概要</label>
-        <textarea type="text" id="bookmark-description" name="bookmark-description" class="form-control w-100" placeholder="概要を入力"></textarea>
+        <textarea type="text" id="bookmark-description" name="bookmark-description" class="form-control w-100"
+          placeholder="概要を入力"></textarea>
       </div>
       <div class="w-100 form-label">
         <label for="">あしあと</label>
@@ -38,7 +42,8 @@ session_check();
         </div>
         <div class="accordion-message text-danger">あしあとが登録されていません</div>
         <div class="w-100 text-center py-3">
-          <input type="button" class="btn btn-outline-primary" value="場所追加" data-bs-toggle="modal" data-bs-target="#addPlaceModal" />
+          <input type="button" class="btn btn-outline-primary" value="場所追加" data-bs-toggle="modal"
+            data-bs-target="#addPlaceModal" />
           <input type="submit" class="btn btn-outline-primary" value="作成" />
         </div>
     </form>
@@ -51,7 +56,8 @@ session_check();
   <template id="accordion-item-template">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="false" aria-controls=""></button>
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#"
+          aria-expanded="false" aria-controls=""></button>
       </h2>
       <div id="" class="accordion-collapse collapse">
         <div class="accordion-body">
@@ -77,15 +83,15 @@ session_check();
             </button>
           </div>
           <div class="address">
-            <p>住所</p>
+            <p class="abouts">住所</p>
             <p class="address-text"></p>
           </div>
           <div class="comment">
-            <p>コメント</p>
+            <p class="abouts">コメント</p>
             <pre class="comment-text"></pre>
           </div>
           <div class="price">
-            <p>交通費</p>
+            <p class="abouts">交通費</p>
             <p class="price-text"></p>
           </div>
         </div>

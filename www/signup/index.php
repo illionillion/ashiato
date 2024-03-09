@@ -37,7 +37,22 @@
 
             <input class="go" type="submit" value="送信">
         </form>
+        <p class="error">
+            <?php
+            if (!empty($_GET["error"])) {
+                if ($_GET["error"] == 2) {
+                    echo "メールアドレスを入力してください";
+                } else if ($_GET["error"] == 1) {
 
+                    echo "ユーザーネームを設定してください";
+                } else if ($_GET["error"] == 3) {
+                    echo "パスワードを設定してください";
+                } else if ($_GET["error"] == 4) {
+                    echo "同じユーザー名かメールアドレスが登録されています。";
+                }
+            }
+            ?>
+        </p>
     </main>
 </body>
 

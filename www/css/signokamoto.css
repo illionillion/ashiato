@@ -35,3 +35,9 @@ header {
 .go {
   background-color: #a9ceec;
 }
+
+.error {
+  color: rgb(255, 140, 0);
+  text-align: center;
+  line-height: 40px;
+}

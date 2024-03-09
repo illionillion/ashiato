@@ -27,7 +27,7 @@
             <hi>まだアカウントがない方は→<hi>
             <a href="/signup">サインアップ</a>
         </div>
-        <form class="in" action="/api/signup/index.php" method="post">
+        <form class="in" action="/api/signin/index.php" method="post">
 
             <input type="text" name="user-name" placeholder="ユーザーネームを入力">
 

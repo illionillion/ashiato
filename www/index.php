@@ -40,7 +40,7 @@ try {
 
 <body>
     <main class="container row m-auto">
-        <header>
+        <header class="py-2">
             <!--検索ボックス-->
             <div class="container-fluid">
                 <form class="d-flex">
@@ -52,9 +52,9 @@ try {
                 </form>
             </div>
             <!--選択ボタン-->
-            <div class="d-flex justify-content-center align-item-center gap-5">
-                <div>ユーザー名: <?= $_SESSION["user_name"] ?></div>
-                <a href="/api/signout">サインアウト</a>
+            <div class="d-flex justify-content-center align-items-center gap-5">
+                <div class="d-flex justify-content-center align-items-center">ユーザー名: <?= $_SESSION["user_name"] ?></div>
+                <a href="/api/signout" class="btn btn-primary">サインアウト</a>
             </div>
         </header>
         <!--テンプレート-->

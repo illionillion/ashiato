@@ -1,6 +1,7 @@
 <?php
 include "../lib/session_check.php";
 include "../lib/connect_db.php";
+include "../components/cards/index.php";
 
 session_check();
 
@@ -8,7 +9,6 @@ session_check();
 if (isset($_GET["id"]) && $_GET["id"] !== "") {
     // id パラメータの値を安全に取得
     $id = $_GET["id"];
-    echo "ID: " . $id;
 
     // ここにSQLかく
     try {
@@ -27,59 +27,10 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
         $bookmarkQuery->bindParam(':bookmark_id', $id, PDO::PARAM_STR);
         $bookmarkQuery->execute();
         $bookmarkResult = $bookmarkQuery->fetchAll(PDO::FETCH_ASSOC);
-        
+        $currentBookmark = $bookmarkResult[0];
         if (count($bookmarkResult) == 0) {
             echo "しおりが見つかりませんでした";
         }
-
-        var_dump($bookmarkResult);
-
-        // $pdo = connect_db();
-        // $stmt0 = $pdo->prepare("SELECT * FROM user");
-        // $stmt = $pdo->prepare("SELECT * FROM bookmark WHERE bookmark_id = ?");
-
-        // // $stmt->bindParam(':user_name', $username, PDO::PARAM_STR);
-        // $stmt0->execute();
-        // $users = $stmt0->fetchAll((PDO::FETCH_ASSOC));
-        // $stmt->execute([$id]);
-        // $bookmarks = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        // $bookmarksId = $bookmarks[0]["bookmark_id"];
-
-        // $stmt1 = $pdo->prepare("SELECT * FROM bookmark_content WHERE bookmark_id = ?");
-
-        // $stmt1->execute([$bookmarksId]);
-        // $bookmarksContents = $stmt1->fetchAll(PDO::FETCH_ASSOC);
-
-        // // var_dump($bookmarksContents);
-
-        // $bookmarksContentsId = $bookmarksContents[0]["bookmark_content_id"];
-
-
-        // $stmt2 = $pdo->prepare("SELECT * FROM bookmark_content_image WHERE bookmark_content_id = ?");
-        // $stmt2->execute([$bookmarksContentsId]);
-        // $bookmarksImage = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-
-        // if (count($bookmarks) == 0) {
-        //     // header("Location: /?error=3");
-        //     echo "ブックマークが見つかりません";
-        // }
-        // // if (count($bookmarksContents) == 0) {
-        // //     // header("Location:/?error4");
-        // //     echo "ブックマークコンテンツが見つかりません";
-        // // }
-        // // var_dump($users);
-        // // var_dump($bookmarks);
-        // $userMap = [];
-        // foreach($users as $uservalue){
-        //     $userMap[$uservalue["user_id"]] = $uservalue["user_name"];
-        // }
-        // // var_dump($userMap);
-        // // var_dump($bookmarksContents);
-        // // echo $bookmarks["bookmark_id"];
-        // if ($bookmarks[0]["bookmark_id"] != $id) {
-        //     echo "記事がありません";
-        // }
 
     } catch (PDOException $e) {
         echo $e->getMessage();
@@ -102,44 +53,39 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/okamoto.css" />
+    <link rel="stylesheet" href="/css/bookmark.css" />
     <script src="/js/main.js"></script>
     <script src="/js/okamoto.js"></script>
 </head>
-
 <body>
     <main class="container row m-auto">
-        <h1>ユーザー名: <?= $_SESSION["user_name"] ?></h1>
-        <a href="/api/signout">サインアウト</a>
-
-        <!--テンプレート-->
-        <?php foreach ($bookmarks as $key => $value) : ?>
-            <div class="asiatotenp">
-                <p><?= $value["bookmark_name"] ?></p>
-                <p><?= $value["bookmark_description"] ?></p>
-
-                <p>あしあと</p>
-
-                <?php foreach ($bookmarksContents as $bookmarksvalue) : ?>
-                    <p><?= $bookmarksvalue["bookmark_content_name"] ?></p>
-                    <?php foreach ($bookmarksImage as $bookmarksImageValue) : ?>
-                        <div><?= $bookmarksImageValue["bookmark_content_image_path"] ?></div>
-                    <?php endforeach; ?>
-                    <p><?= $bookmarksvalue["bookmark_content_address"] ?></p>
-                    <p><?= $bookmarksvalue["bookmark_content_comment"] ?></p>
-                    <p><?= $bookmarksvalue["bookmark_content_price"] ?></p>
-                    <p><?= $bookmarksvalue["bookmark_instagram_url"] ?></p>
-
-
-
-                <?php endforeach; ?>
-
-
+        <h1 class="text-center text-white"><?= $currentBookmark["bookmark_name"] ?></h1>
+        <?php 
+            $cards = new Cards($currentBookmark["bookmark_id"]);
+            $cards->render();
+        ?>
+        <!-- 以下を複製する（場所データ） -->
+        <div class="place-item w-100">
+            <div class="content-header">
+                <h2></h2>
+                <img src="" alt="画像">
+                <div></div>
             </div>
-        <?php endforeach; ?>
-
-        <!--下のボタン-->
-
+            <div class="content-body">
+                <div class="top d-flex justify-content-center align-items-center gap-3">
+                    <div class="price w-100 text-center">使ったお金：100円</div>
+                    <div class="staying-time w-100 text-center">滞在時間：3時間</div>
+                </div>
+                <div class="bottom d-flex justify-content-center align-items-center gap-3">
+                    <div class="left w-100 arrow text-center">↓</div>
+                    <div class="right w-100 text-center">
+                        <div class="transportation">環状線</div>
+                        <div class="moving-time">60分</div>
+                        <div class="fee">800円</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 

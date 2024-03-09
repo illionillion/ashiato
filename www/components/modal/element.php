@@ -53,6 +53,15 @@
                             placeholder="ひとことコメントを入力"></textarea>
                     </div>
                     <div class="w-100 form-label">
+                        <label for="staytime" class="w-100 mb-1">滞在時間</label>
+                        <input type="number" id="staytime" name="staytime" class="form-control w-100" placeholder="**時間" />
+                        <input type="number" id="staytime" name="staytime" class="form-control w-100" placeholder="**分" />
+                    </div>
+                    <div class="w-100 form-label">
+                        <label for="used" class="w-100 mb-1">使ったお金</label>
+                        <input type="number" id="used" name="used" class="form-control w-100" placeholder="**円" />
+                    </div>
+                    <div class="w-100 form-label">
                         <label for="expenses" class="w-100 mb-1">交通費</label>
                         <input type="number" id="expenses" name="expenses" class="form-control w-100" placeholder="**円" />
                     </div>

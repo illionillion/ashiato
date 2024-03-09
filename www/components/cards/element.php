@@ -1,9 +1,10 @@
 <?php if (isset($this->cards) && !empty($this->cards)) : ?>
+    <?php foreach ($cards as $i => $card) : ?>
     <div class="place-item w-100">
         <div class="content-header">
-            <h2></h2>
-            <img src="" alt="画像">
-            <div></div>
+            <h2><?= $card["bookmark_content_name"] ?></h2>
+            <img src="<?= $card["bookmark_content_image_path"] ?>" alt="画像">
+            <div><?= $card["bookmark_content_comment"] ?></div>
         </div>
         <div class="content-body">
             <div class="top d-flex justify-content-center align-items-center gap-3">
@@ -20,4 +21,5 @@
             </div>
         </div>
     </div>
+    <?php endforeach; ?>
 <?php endif; ?>

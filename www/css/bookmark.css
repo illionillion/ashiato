@@ -1,3 +1,9 @@
 main.container h1 {
   background-color: #5ac3f6;
 }
+
+.content-header img {
+  width: 250px;
+  height: 200px;
+  object-fit: contain;
+}

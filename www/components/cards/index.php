@@ -14,7 +14,6 @@ class Cards
             // クエリを実行
             $cardsQuery->execute();
             $this->cards = $cardsQuery->fetchAll(PDO::FETCH_ASSOC);
-            var_dump($this->cards);
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }

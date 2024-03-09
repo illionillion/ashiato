@@ -25,9 +25,9 @@
     <main class="container row m-auto">
         <div class="ready">
             <hi>まだアカウントがない方は→<hi>
-            <a href="/signup">サインアップ</a>
+                    <a href="/signup">サインアップ</a>
         </div>
-        <form class="in" action="/api/signup/index.php" method="post">
+        <form class="in" action="/api/signin/index.php" method="post">
 
             <input type="text" name="user-name" placeholder="ユーザーネームを入力">
 
@@ -35,6 +35,21 @@
 
             <input class="go" type="submit" value="送信">
         </form>
+        <p class="error">
+            <?php
+            if (!empty($_GET["error"])) {
+                if ($_GET["error"] == 1) {
+                    echo "ユーザーネームを入力してください";
+                } else if ($_GET["error"] == 2) {
+                    echo "パスワードを入力してください";
+                } else if ($_GET["error"] == 3) {
+                    echo "存在しないユーザー名です";
+                } else if ($_GET["error"] == 4) {
+                    echo "パスワードが間違っています";
+                }
+            }
+            ?>
+        </p>
 
     </main>
 </body>

@@ -8,74 +8,52 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body row">
-                    <div class="w-100 form-label">
-                        <label for="place-name" class="w-100 mb-1">場所名</label>
-                        <input type="text" id="place-name" name="place-name" class="form-control w-100"
-                            placeholder="場所名を入力" />
-                    </div>
-                    <div class="w-100 form-label">
-                        <label for="place-address" class="w-100 mb-1">住所</label>
-                        <input type="text" id="place-address" name="place-address" class="form-control w-100"
-                            placeholder="住所を入力" />
-                    </div>
-                    <div class="w-100 form-label">
-                        <label for="image-input" class="text-center">画像を追加</label>
-                        <!-- <input type="file" name="" id="image-input" multiple accept="image/png, image/jpeg" -->
-                        <input type="file" name="" id="image-input" accept="image/png, image/jpeg"
-                            class="d-none" />
-                        <div id="preview"></div>
-                    </div>
-                    <!-- <template id="slider-template">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title"></div>
-                                <pre class="card-text"></pre>
-                                <div id="carouselExample" class="carousel slide" style="height: 300px">
-                                    <div class="carousel-inner h-100"></div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                                        data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon bg-primary rounded"
-                                            aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                                        data-bs-slide="next">
-                                        <span class="carousel-control-next-icon bg-primary rounded"
-                                            aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            </div>
+                    <form id="<?= $id ?>Form">
+                        <div class="w-100 form-label">
+                            <label for="place-name" class="w-100 mb-1">場所名</label>
+                            <input type="text" id="place-name" name="place-name" class="form-control w-100"
+                                placeholder="場所名を入力" />
                         </div>
-                    </template> -->
-                    <div class="w-100 form-label">
-                        <label for="place-comment" class="w-100 mb-1">ひとこと</label>
-                        <textarea id="place-comment" name="place-comment" class="form-control w-100"
-                            placeholder="ひとことコメントを入力"></textarea>
-                    </div>
-                    <div class="w-100 form-label">
-                        <label for="" class="w-100 mb-1">滞在時間</label>
-                        <input type="number" id="stay-time-h" name="stay-time-h" class="form-control w-100" placeholder="**時間" />
-                        <input type="number" id="stay-time-m" name="stay-time-m" class="form-control w-100" placeholder="**分" />
-                    </div>
-                    <div class="w-100 form-label">
-                        <label for="used-money" class="w-100 mb-1">使ったお金</label>
-                        <input type="number" id="used-money" name="used-money" class="form-control w-100" placeholder="**円" />
-                    </div>
-                    <div class="w-100 form-label">
-                        <label for="expenses" class="w-100 mb-1">交通費</label>
-                        <input type="number" id="expenses" name="expenses" class="form-control w-100" placeholder="**円" />
-                    </div>
-                    <div class="w-100 form-label">
-                        <label for="" class="w-100 mb-1">移動時間</label>
-                        <input type="number" id="move-time-h" name="move-time-h" class="form-control w-100" placeholder="**時間" />
-                        <input type="number" id="move-time-m" name="move-time-m" class="form-control w-100" placeholder="**分" />
-                    </div>
-                    <div class="w-100 form-label">
-                        <label for="how-move" class="w-100 mb-1">移動手段</label>
-                        <textarea id="how-move" name="how-move" class="form-control w-100"
-                            placeholder="移動手段を入力"></textarea>
-                    </div>
+                        <div class="w-100 form-label">
+                            <label for="place-address" class="w-100 mb-1">住所</label>
+                            <input type="text" id="place-address" name="place-address" class="form-control w-100"
+                                placeholder="住所を入力" />
+                        </div>
+                        <div class="w-100 form-label">
+                            <label for="image-input" class="text-center">画像を追加</label>
+                            <input type="file" name="" id="image-input" accept="image/png, image/jpeg"
+                                class="d-none" />
+                            <div id="preview"></div>
+                        </div>
+                        <div class="w-100 form-label">
+                            <label for="place-comment" class="w-100 mb-1">ひとこと</label>
+                            <textarea id="place-comment" name="place-comment" class="form-control w-100"
+                                placeholder="ひとことコメントを入力"></textarea>
+                        </div>
+                        <div class="w-100 form-label">
+                            <label for="" class="w-100 mb-1">滞在時間</label>
+                            <input type="number" id="stay-time-h" name="stay-time-h" class="form-control w-100" placeholder="**時間" />
+                            <input type="number" id="stay-time-m" name="stay-time-m" class="form-control w-100" placeholder="**分" />
+                        </div>
+                        <div class="w-100 form-label">
+                            <label for="used-money" class="w-100 mb-1">使ったお金</label>
+                            <input type="number" id="used-money" name="used-money" class="form-control w-100" placeholder="**円" />
+                        </div>
+                        <div class="w-100 form-label">
+                            <label for="expenses" class="w-100 mb-1">交通費</label>
+                            <input type="number" id="expenses" name="expenses" class="form-control w-100" placeholder="**円" />
+                        </div>
+                        <div class="w-100 form-label">
+                            <label for="" class="w-100 mb-1">移動時間</label>
+                            <input type="number" id="move-time-h" name="move-time-h" class="form-control w-100" placeholder="**時間" />
+                            <input type="number" id="move-time-m" name="move-time-m" class="form-control w-100" placeholder="**分" />
+                        </div>
+                        <div class="w-100 form-label">
+                            <label for="how-move" class="w-100 mb-1">移動手段</label>
+                            <textarea id="how-move" name="how-move" class="form-control w-100"
+                                placeholder="移動手段を入力"></textarea>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">戻る</button>

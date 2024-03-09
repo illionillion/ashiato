@@ -1,51 +1,23 @@
-let image = undefined;
-
-const changedFile = e => {
-  if (e.target.files.length === 0) return;
-  const preview = document.getElementById("preview");
-  preview.innerHTML = "";
-
-  const img = new Image()
-  img.src = URL.createObjectURL(e.target.files[0])
-
-  img.classList.add(
-    "d-block",
-    "w-100",
-    "h-100",
-    "object-fit-contain"
-  );
-
-  preview.appendChild(img);
-  image = img.src
-
-  // const template = document.getElementById("slider-template");
-  // const clone = template.content.cloneNode(true);
-  // preview.appendChild(clone);
-  // const slider = document.querySelector("#preview .carousel-inner");
-  // Object.values(e.target.files).forEach((file, index) => {
-  //   const imageObj = new Image();
-  //   imageObj.src = URL.createObjectURL(file);
-  //   console.log(imageObj);
-  //   images.push(imageObj)
-  //   const slide = document.createElement("div");
-  //   slide.classList.add("carousel-item", "h-100", index === 0 && "active");
-  //   imageObj.classList.add(
-  //     "d-block",
-  //     "img-thumbnail",
-  //     "w-100",
-  //     "h-100",
-  //     "object-fit-contain"
-  //   );
-  //   slide.appendChild(imageObj);
-  //   slider.appendChild(slide);
-  // });
-}
-
 window.addEventListener("load", () => {
   let placeCount = 0;
+  let image = undefined;
 
-  document.getElementById("image-input").addEventListener("change", changedFile);
-  document.querySelector("#placeAddBtn").addEventListener("click", () => {
+  const changedFile = (e) => {
+    if (e.target.files.length === 0) return;
+    const preview = document.getElementById("preview");
+    preview.innerHTML = "";
+
+    const img = new Image();
+    img.src = URL.createObjectURL(e.target.files[0]);
+
+    img.classList.add("d-block", "w-100", "h-100", "object-fit-contain");
+
+    preview.appendChild(img);
+    image = img.src;
+  };
+
+  const addPlace = (e) => {
+    e.preventDefault();
     // 値取得
     const place_name = document.getElementById("place-name").value;
     const place_address = document.getElementById("place-address").value;
@@ -59,18 +31,19 @@ window.addEventListener("load", () => {
     const how_move = document.getElementById("how-move").value;
     const image_file = document.getElementById("image-input").files;
 
-    if (!place_name
-      || !place_address
-      || !place_comment
-      || !expenses
-      || !stay_time_h
-      || !stay_time_m
-      || !used_money
-      || !move_time_h
-      || !move_time_m
-      || !how_move
-      || !image_file.length
-      ) {
+    if (
+      !place_name ||
+      !place_address ||
+      !place_comment ||
+      !expenses ||
+      !stay_time_h ||
+      !stay_time_m ||
+      !used_money ||
+      !move_time_h ||
+      !move_time_m ||
+      !how_move ||
+      !image_file.length
+    ) {
       alert("未入力の項目があります。");
       return;
     }
@@ -100,60 +73,56 @@ window.addEventListener("load", () => {
     }]`;
     expenses_input.type = "hidden";
     expenses_input.value = expenses;
-    // 
+    //
     const stay_time_h_input = document.createElement("input");
     stay_time_h_input.name = `bookmark_content[${placeCount}][${
       document.getElementById("stay-time-h").id
     }]`;
     stay_time_h_input.type = "hidden";
     stay_time_h_input.value = stay_time_h;
-    // 
+    //
     const stay_time_m_input = document.createElement("input");
     stay_time_m_input.name = `bookmark_content[${placeCount}][${
       document.getElementById("stay-time-m").id
     }]`;
     stay_time_m_input.type = "hidden";
     stay_time_m_input.value = stay_time_m;
-    // 
+    //
     const used_money_input = document.createElement("input");
     used_money_input.name = `bookmark_content[${placeCount}][${
       document.getElementById("used-money").id
     }]`;
     used_money_input.type = "hidden";
     used_money_input.value = used_money;
-    // 
+    //
     const move_time_h_input = document.createElement("input");
     move_time_h_input.name = `bookmark_content[${placeCount}][${
       document.getElementById("move-time-h").id
     }]`;
     move_time_h_input.type = "hidden";
     move_time_h_input.value = move_time_h;
-    // 
+    //
     const move_time_m_input = document.createElement("input");
     move_time_m_input.name = `bookmark_content[${placeCount}][${
       document.getElementById("move-time-m").id
     }]`;
     move_time_m_input.type = "hidden";
     move_time_m_input.value = move_time_m;
-    // 
+    //
     const how_move_input = document.createElement("input");
     how_move_input.name = `bookmark_content[${placeCount}][${
       document.getElementById("how-move").id
     }]`;
     how_move_input.type = "hidden";
     how_move_input.value = how_move;
-    // 
+    //
     const image_input = document.createElement("input");
     image_input.name = `bookmark_content[${placeCount}][${
       document.getElementById("image-input").id
     }]`;
     image_input.type = "file";
-    image_input.classList.add("d-none")
+    image_input.classList.add("d-none");
     image_input.files = image_file;
-    // const clone_image_input = document.getElementById('image-input').cloneNode(true);
-    // clone_image_input.name = `bookmark_content[${placeCount}][${
-    //   document.getElementById("image-input").id
-    // }]`
     console.log(image_input.files);
 
     // placeにマウント
@@ -168,19 +137,8 @@ window.addEventListener("load", () => {
     document.getElementById("place").appendChild(move_time_m_input);
     document.getElementById("place").appendChild(how_move_input);
     document.getElementById("place").appendChild(image_input);
-
-    document.getElementById("place-name").value = "";
-    document.getElementById("place-address").value = "";
-    document.getElementById("place-comment").value = "";
-    document.getElementById("expenses").value = "";
-
-    document.getElementById("stay-time-h").value = "";
-    document.getElementById("stay-time-m").value = "";
-    document.getElementById("used-money").value = "";
-    document.getElementById("move-time-h").value = "";
-    document.getElementById("move-time-m").value = "";
-    document.getElementById("how-move").value = "";
-    // document.getElementById("image-input").reset() = "";
+    // 入力リセット
+    document.getElementById("addPlaceModalForm").reset()
     document.querySelector("#addPlaceModal .btn-close").click();
 
     // アコーディオン追加
@@ -193,42 +151,14 @@ window.addEventListener("load", () => {
     const clone = template.content.cloneNode(true);
     // previewにスライダーを挿入
     accordion.appendChild(clone);
-    const img = new Image()
-    img.src = image
-    img.classList.add(
-      "d-block",
-      "w-100",
-      "h-100",
-      "object-fit-contain"
+    const img = new Image();
+    img.src = image;
+    img.classList.add("d-block", "w-100", "h-100", "object-fit-contain");
+    const slider = document.querySelector(
+      `.accordion-item:nth-child(${placeCount + 1}) .carousel-inner`
     );
-    const slider = document.querySelector(`.accordion-item:nth-child(${placeCount + 1}) .carousel-inner`);
-    slider.appendChild(img)
-    // スライダーの中のスライドを入れる部分を取得
-    // const slider = document.querySelector("#preview .carousel-inner");
-    // const slider = document.querySelector(`.accordion-item:nth-child(${placeCount + 1}) .carousel-inner`);
-    // ファイルをループを回して取り出してスライダーに挿入
-    // Object.values(images).forEach((image, index) => {
-      
-    //   //   div作成
-    //   const slide = document.createElement("div");
-    //   //   クラス追加
-    //   slide.classList.add(
-    //     "carousel-item",
-    //     "h-100",
-    //     index === 0 && "active" // 最初の画像のみ「active」クラスをつける
-    //   );
-    //   // imageObj.classList.add(
-    //   //   "d-block",
-    //   //   "img-thumbnail",
-    //   //   "w-100",
-    //   //   "h-100",
-    //   //   "object-fit-contain"
-    //   // );
-    //   //   スライドに画像マウント
-    //   slide.appendChild(image);
-    //   //   スライダーにスライドマウント
-    //   slider.appendChild(slide);
-    // });
+    slider.appendChild(img);
+
     // id変更
     const accordionCollapse = document.querySelector(
       `.accordion-item:nth-child(${placeCount + 1}) .accordion-collapse`
@@ -257,32 +187,39 @@ window.addEventListener("load", () => {
       }) .accordion-body .comment-text`
     );
     comment.textContent = place_comment;
-    // コメント変更
+    // 価格変更
     const price = document.querySelector(
       `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .price-text`
     );
     price.textContent = `${expenses}円`;
-    // カルーセル
-    const carousel = document.querySelector(
-      `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .carousel`
+    // 過ごした時間変更
+    const stay_time = document.querySelector(
+      `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .stay-time-text`
     );
-    carousel.id = `carousel-${placeCount + 1}`;
-    const carouselPrev = document.querySelector(
-      `.accordion-item:nth-child(${
-        placeCount + 1
-      }) .accordion-body .carousel .carousel-control-prev`
+    // 移動時間変更
+    const move_time = document.querySelector(
+      `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .move-time-text`
     );
-    carouselPrev.dataset.bsTarget = `#carousel-${placeCount + 1}`;
-    const carouselNext = document.querySelector(
-      `.accordion-item:nth-child(${
-        placeCount + 1
-      }) .accordion-body .carousel .carousel-control-next`
+    move_time.textContent = `${move_time_h}時間${move_time_m}分`;
+    // 使ったお金変更
+    const used_price = document.querySelector(
+      `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .used-price-text`
     );
-    carouselNext.dataset.bsTarget = `#carousel-${placeCount + 1}`;
-
+    used_price.textContent = `${used_money}円`;
+    // 使ったお金変更
+    const how_move_text = document.querySelector(
+      `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .how-move-text`
+    );
+    how_move_text.textContent = `${how_move}円`;
     const preview = document.getElementById("preview");
     preview.innerHTML = "";
     image = undefined;
     placeCount++;
-  });
+  };
+
+  document
+    .getElementById("image-input")
+    .addEventListener("change", changedFile);
+  document.getElementById("placeAddBtn").addEventListener("click", addPlace);
+  document.getElementById("addPlaceModalForm").addEventListener("submit", addPlace);
 });

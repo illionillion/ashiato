@@ -63,31 +63,15 @@ session_check();
         <div class="accordion-body">
           <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
-              <!--
-              <div class="carousel-item active">
-                <img src="/img/sample1.jpg" class="d-block w-100" alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="/img/sample1.jpg" class="d-block w-100" alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="/img/sample1.jpg" class="d-block w-100" alt="..." />
-              </div>-->
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
-          <div class="staytime">
+          <div class="stay-time">
             <p class="abouts">過ごした時間</p>
+            <p class="stay-time-text"></p>
           </div>
-          <div class="usedprice">
+          <div class="used-price">
             <p class="abouts">使ったお金</p>
+            <p class="used-price-text"></p>
           </div>
           <div class="address">
             <p class="abouts">住所</p>
@@ -101,11 +85,13 @@ session_check();
             <p class="abouts">交通費</p>
             <p class="price-text"></p>
           </div>
-          <div class="movetime">
+          <div class="move-time">
             <p class="abouts">移動時間</p>
+            <p class="move-time-text"></p>
           </div>
-          <div class="howmove">
+          <div class="how-move">
             <p class="abouts">移動手段</p>
+            <pre class="how-move-text"></pre>
           </div>
         </div>
       </div>

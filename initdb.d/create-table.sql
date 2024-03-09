@@ -17,29 +17,30 @@ CREATE TABLE bookmark (
     user_id INT NOT NULL,
     created_at DATETIME DEFAULT NOW(),
     FOREIGN KEY (user_id) REFERENCES user(user_id)
-)
+);
 
 -- しおり内のコンテンツ
 CREATE TABLE bookmark_content (
     bookmark_content_id INT PRIMARY KEY AUTO_INCREMENT,
     bookmark_content_name VARCHAR(255) NOT NULL,
     bookmark_content_address VARCHAR(255) NOT NULL,
-    bookmark_content_comment VARCHAR(255), NOT NULL
+    bookmark_content_comment VARCHAR(255) NOT NULL,
     bookmark_content_price INT NOT NULL,
     bookmark_id INT NOT NULL,
     bookmark_instagram_url VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT NOW(),
     FOREIGN KEY (bookmark_id) REFERENCES bookmark(bookmark_id)
-)
+);
 
 -- しおり内コンテンツの画像
 CREATE TABLE bookmark_content_image (
     bookmark_content_image_id INT PRIMARY KEY AUTO_INCREMENT,
-    bookmark_content_image_data LONGBLOB NOT NULL,
+    -- bookmark_content_image_data LONGBLOB NOT NULL,    
+    bookmark_content_image_path LONGTEXT NOT NULL,
     created_at DATETIME DEFAULT NOW(),
     bookmark_content_id INT NOT NULL,
     FOREIGN KEY (bookmark_content_id) REFERENCES bookmark_content(bookmark_content_id)
-)
+);
 
 -- -- 日記テーブル
 -- CREATE TABLE diary (
@@ -67,6 +68,30 @@ VALUES ('JohnDoe', SHA2('password', 256), 'john-doe@example.com');
 
 INSERT INTO user (user_name, password, email)
 VALUES ('JohnDoe2', SHA2('password', 256), 'john-doe2@example.com');
+
+-- しおりを追加
+INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
+VALUES ('Test Bookmark', 'This is a test bookmark', 1);
+
+-- しおり内のコンテンツを追加
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url)
+VALUES ('Test Content', '123 Test St', 'This is a test content', 10, 1, 'https://www.instagram.com/test_content');
+
+-- しおり内コンテンツの画像を追加
+INSERT INTO bookmark_content_image (bookmark_content_image_path, bookmark_content_id)
+VALUES ('/path/to/test_image.jpg', 1);
+
+-- INSERT INTO bookmark(bookmark_id,bookmark_name,bookmark_description,user_id,created_at)
+-- VALUES (1,"京都","酒蔵めぐり",1,NOW());
+
+-- INSERT INTO bookmark_content(bookmark_content_id,bookmark_content_name,bookmark_content_address,bookmark_content_comment,bookmark_content_price,bookmark_id,bookmark_instagram_url,created_at)
+-- VALUES (1,"伏見","住所","コメント","300","インスタ",NOW());
+
+-- INSERT INTO bookmark_content_image(bookmark_image_id,bookmark_content_image_path,created_at,bookmark_content_id)
+-- VALUES (1,"https://frieren-anime.jp/wp-content/themes/frieren_2023/assets/img/top/top/1_visual.jpg",NOW(),1);
+
+
+
 -- -- 蔵書のカテゴリ
 -- CREATE TABLE book_category (
 --     book_category_id INT PRIMARY KEY AUTO_INCREMENT,

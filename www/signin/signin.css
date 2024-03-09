@@ -1,0 +1,45 @@
+header {
+    width: 50%;
+    height: 45px;
+    margin: 20px auto;
+  }
+  .title {
+    float: left;
+    color: #a9ceec;
+  }
+  .rogo {
+    float: right;
+    color: #a9ceec;
+  }
+  
+  .ready {
+    width: 60%;
+    margin: 20px auto;
+  }
+  .ready p {
+    float: right;
+  }
+  .ready a {
+    float: right;
+  }
+  
+  .in input {
+    width: 40%;
+    margin: 30px auto;
+    display: block;
+    border-radius: 10px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  
+  .go {
+    background-color: #a9ceec;
+  }
+  .ready {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ready a {
+    margin-left: 10px; 
+}

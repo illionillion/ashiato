@@ -161,11 +161,26 @@ window.addEventListener("load", () => {
     document.getElementById("place").appendChild(place_address_input);
     document.getElementById("place").appendChild(place_comment_input);
     document.getElementById("place").appendChild(expenses_input);
+    document.getElementById("place").appendChild(stay_time_h_input);
+    document.getElementById("place").appendChild(stay_time_m_input);
+    document.getElementById("place").appendChild(used_money_input);
+    document.getElementById("place").appendChild(move_time_h_input);
+    document.getElementById("place").appendChild(move_time_m_input);
+    document.getElementById("place").appendChild(how_move_input);
+    document.getElementById("place").appendChild(image_input);
 
     document.getElementById("place-name").value = "";
     document.getElementById("place-address").value = "";
     document.getElementById("place-comment").value = "";
     document.getElementById("expenses").value = "";
+
+    document.getElementById("stay-time-h").value = "";
+    document.getElementById("stay-time-m").value = "";
+    document.getElementById("used-money").value = "";
+    document.getElementById("move-time-h").value = "";
+    document.getElementById("move-time-m").value = "";
+    document.getElementById("how-move").value = "";
+    // document.getElementById("image-input").reset() = "";
     document.querySelector("#addPlaceModal .btn-close").click();
 
     // アコーディオン追加

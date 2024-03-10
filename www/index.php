@@ -42,21 +42,31 @@ try {
 <body>
     <main class="row">
         <header class="py-2">
+             <!--写真-->
+        <img src="/img/ashiato.png" alt="Logo" style="width: 100px; height: 100px; object-fit: contain;">
             <!--検索ボックス-->
+
+            </div>
             <div class="container-fluid">
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <!-- <button class="searchgo btn btn-outline-success" type="submit"> -->
                     <button class="searchgo btn btn-outline-success" type="button">
-                        <img src="/img/icon/search.png" alt="" class="search">
+                        <img src="/img/search.png" alt="" class="search">
                     </button>
                 </form>
             </div>
-            <!--選択ボタン-->
-            <div class="d-flex justify-content-center align-items-center gap-5">
-                <div class="d-flex justify-content-center align-items-center">ユーザー名: <?= $_SESSION["user_name"] ?></div>
-                <a href="/api/signout" class="btn btn-primary">サインアウト</a>
-            </div>
+            
+           <!-- 選択ボタン -->
+<div class="d-flex justify-content-center align-items-center gap-5">
+        <?= $_SESSION["user_name"] ?>
+</div>
+    <div class="d-flex justify-content-center align-items-center gap-5">
+    <a href="/api/signout" class="logout">ログアウト</a>
+    </div>
+</div>
+
+            
         </header>
         <!--テンプレート-->
         <?php foreach ($bookmarkResult as $key => $value) : ?>
@@ -79,10 +89,14 @@ try {
                     
                 </button> -->
                 <a href="/create-bookmark" class="btn btn-primary btn-lg">
-                    しおり作成
+                    Write
+                    <img src="/img/pen.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">
+
                 </a>
                 <button type="button" class="btn btn-primary btn-lg">
-                    自分のしおり
+                    My page
+                    <img src="/img/goal.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">
+        
                 </button>
             </div>
         </footer>

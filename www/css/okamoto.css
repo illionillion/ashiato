@@ -1,11 +1,29 @@
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  background-color: rgba(148, 148, 148, 0.7);
-}
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      background-color: rgba(148, 148, 148, 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .left-side {
+      display: flex;
+      align-items: center;
+    }
+
+  
+
+ 
 body{
   font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
   
@@ -15,8 +33,12 @@ body{
   margin: 0 auto;
 }
 
+.search{
+  width: 100px;
+}
 .searchgo {
   background-color: white;
+  float:right; 
 }
 
 .like-or-oll {
@@ -26,7 +48,7 @@ body{
 
 /* ヘッダーとフッターの調整 */
 .search{
-  width: 20px;
+  width: 50px;
 }
 .d-flex{
   padding: 0 3rem;
@@ -37,7 +59,9 @@ body{
 .gap-5{
   height: 1.2rem;
 }
-
+.logout{
+  width:90px;
+}
 .picture {
   width: 100%;
   min-width: 200px;
@@ -69,7 +93,7 @@ footer {
   right: 0;
   z-index: 10;
   width: 100%;
-  background-color: rgba(148, 148, 148, 0.7);
+  background-color: #83ACC5
 }
 
 .nuderbotton {
@@ -137,3 +161,13 @@ p {
     bottom: 5%;
   }
 }
+
+.btn-primary,
+        .btn-outline-success {
+          width: 25%;
+            border-color: black;
+            border-width:2px; 
+            color: black;
+            background-color: white
+            
+        }

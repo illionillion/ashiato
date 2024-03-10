@@ -91,6 +91,7 @@ p {
   padding: 0 !important; /*文字が折り返される場合*/
 }
 .contents_heading p {
+  right: 10%;
   &.name {
     bottom: 10%;
   }

@@ -17,7 +17,7 @@ try {
     b.user_id,
     b.created_at,
     u.user_name
-    FROM bookmark b JOIN user u ON b.user_id = u.user_id");
+    FROM bookmark b JOIN user u ON b.user_id = u.user_id ORDER BY b.bookmark_id");
     // クエリを実行
     $bookmarkQuery->execute();
     $bookmarkResult = $bookmarkQuery->fetchAll(PDO::FETCH_ASSOC);

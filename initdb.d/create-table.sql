@@ -80,6 +80,8 @@ VALUES ('Luis Suárez ', SHA2('soccer', 256), 'soccerolayer@icloud.com');
 
 -- INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 -- VALUES ('Test Bookmark3', 'This is a test bookmark3', 2);
+INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
+VALUES ('京都花見', '#京都 ＃観光', 7);
 
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('大阪旅行', '食べ歩き', 1);
@@ -101,9 +103,6 @@ VALUES ('日帰り愛知', '名所巡り', 6);
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('みんなでドライブ', '免許持ってないけど！', 5);
 
-INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
-VALUES ('京都花見', '#京都 ＃観光', 7);
-
 -- しおり内のコンテンツを追加
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -113,7 +112,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('難波', '大阪府難波', '商店街で食べ歩き', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+VALUES ('難波', '大阪府難波', '商店街で食べ歩き', 10, 2, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -123,7 +122,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('心斎橋', ' 大阪府大阪市', 'お洒落な居酒屋', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+VALUES ('心斎橋', ' 大阪府大阪市', 'お洒落な居酒屋', 10, 2, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -133,7 +132,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('道頓堀', ' 大阪府大阪市', '綺麗な橋', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+VALUES ('道頓堀', ' 大阪府大阪市', '綺麗な橋', 10, 2, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -143,7 +142,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('スカイツリー', '〒131-0045 東京都墨田区押上１丁目１−２', 'タワー', 162000, 2, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+VALUES ('スカイツリー', '〒131-0045 東京都墨田区押上１丁目１−２', 'タワー', 162000, 3, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -153,7 +152,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('小樽', '〒047-0032 北海道小樽市稲穂３丁目１０−１６', '三角市場', 5990, 3, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+VALUES ('小樽', '〒047-0032 北海道小樽市稲穂３丁目１０−１６', '三角市場', 5990, 4, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -163,7 +162,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('博多旅行', '福岡県福岡市博多区築港本町１４－１', '博多ポートタワー', 3330, 4, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+VALUES ('博多旅行', '福岡県福岡市博多区築港本町１４－１', '博多ポートタワー', 3330, 5, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -173,7 +172,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('沖縄旅行', '〒905-0206 沖縄県国頭郡本部町石川４２４', '美ら海水族館', 19700, 5, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+VALUES ('沖縄旅行', '〒905-0206 沖縄県国頭郡本部町石川４２４', '美ら海水族館', 19700, 6, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -183,7 +182,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('名古屋駅', '〒450-0002愛知県名古屋市中村区名駅1丁目1-4', '駅めっちゃきれい', 2500, 6, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 0, 30, 1000, 2, 30, "新快速で移動");
+VALUES ('名古屋駅', '〒450-0002愛知県名古屋市中村区名駅1丁目1-4', '駅めっちゃきれい', 2500, 7, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 0, 30, 1000, 2, 30, "新快速で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -193,7 +192,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('竹島', '〒450-0002愛知県名古屋市中村区名駅1丁目1-4', '夕日めちゃきれい', 1000, 6, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 30, 50, 1, 00, "名古屋駅から電車");
+VALUES ('竹島', '〒450-0002愛知県名古屋市中村区名駅1丁目1-4', '夕日めちゃきれい', 1000, 8, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 30, 50, 1, 00, "名古屋駅から電車");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -203,7 +202,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('淡路島までドライブ', '淡路島', 'ドライブたのしい', 2000, 7, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 0, 20, 0, 2, 00, "車");
+VALUES ('淡路島までドライブ', '淡路島', 'ドライブたのしい', 2000, 8, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 0, 20, 0, 2, 00, "車");
 
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
@@ -214,7 +213,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '城南宮', '花綺麗', 1100, 8, 'https://www.instagram.com/test_content', '/img/Jonangu.jpg', 1, 30, 1100, 0, 10, "徒歩");
+VALUES ('京都花見', '城南宮', '花綺麗', 1100, 1, 'https://www.instagram.com/test_content', '/img/Jonangu.jpg', 1, 30, 1100, 0, 10, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -224,7 +223,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '庭園', '綺麗', 0, 8, 'https://www.instagram.com/test_content', '/img/Kyoto_Hanami_Garden.jpg', 0, 30, 0, 0, 10, "徒歩");
+VALUES ('京都花見', '庭園', '綺麗', 0, 1, 'https://www.instagram.com/test_content', '/img/Kyoto_Hanami_Garden.jpg', 0, 30, 0, 0, 10, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -234,7 +233,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '下鴨神社', '綺麗', 0, 8, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 1, 00, 0, 0, 40, "電車");
+VALUES ('京都花見', '下鴨神社', '綺麗', 0, 1, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 1, 00, 0, 0, 40, "電車");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -244,7 +243,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '北野天満宮', '花が綺麗', 0, 8, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 0, 30, 0, 0, 10, "徒歩");
+VALUES ('京都花見', '北野天満宮', '花が綺麗', 0, 1, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 0, 30, 0, 0, 10, "徒歩");
 
 -- しおり内コンテンツの画像を追加
 -- INSERT INTO bookmark_content_image (bookmark_content_image_path, bookmark_content_id)

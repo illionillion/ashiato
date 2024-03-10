@@ -1,6 +1,6 @@
 <?php if (isset($this->cards) && !empty($this->cards)): ?>
     <?php foreach ($cards as $i => $card): ?>
-        <div class="place-item w-100">
+        <div class="one place-item w-100">
             <div class="content-header">
                 <h2 class="contentname">
                     <?= $card["bookmark_content_name"] ?>

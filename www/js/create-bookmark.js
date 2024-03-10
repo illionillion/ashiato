@@ -205,6 +205,7 @@ window.addEventListener("load", () => {
     const stay_time = document.querySelector(
       `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .stay-time-text`
     );
+    stay_time.textContent = `${stay_time_h}時間${stay_time_m}分`;
     // 移動時間変更
     const move_time = document.querySelector(
       `.accordion-item:nth-child(${placeCount + 1}) .accordion-body .move-time-text`

@@ -95,6 +95,7 @@ VALUES ('博多旅行', '美味しい料理', 2);
 
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('沖縄', 'おしゃれ', 2);
+
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('大阪', '名所巡り', 6);
 
@@ -258,7 +259,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('大阪', ' 心斎橋', '心斎橋筋', 0, 9, 'https://www.instagram.com/test_content', '/img/Shinsaibashi.jpg', 0, 10, 0, 0, 0, "");
+VALUES ('心斎橋', '心斎橋', '夜でも賑やかキャッチが多いので注意', 0, 9, 'https://www.instagram.com/test_content', '/img/Shinsaibashi.jpg', 0, 10, 0, 0, 0, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -268,7 +269,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('大阪', ' 心斎橋', '心斎橋筋商店街', 0, 9, 'https://www.instagram.com/test_content', '/img/Dotonbori.jpg', 2, 0, 3500, 0, 10, "徒歩");
+VALUES ('心斎橋筋商店街', ' 心斎橋', '一本入るとそこには飲み屋が', 0, 9, 'https://www.instagram.com/test_content', '/img/Dotonbori.jpg', 2, 0, 3500, 0, 10, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -278,7 +279,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('大阪', ' 北新地', '北新地', 0, 9, 'https://www.instagram.com/test_content', '/img/Kitashinch.jpg', 1, 0, 50000, 0, 15, "徒歩");
+VALUES ('大阪', ' 北新地', '夜の街、綺麗', 0, 9, 'https://www.instagram.com/test_content', '/img/Kitashinch.jpg', 1, 0, 50000, 0, 15, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -288,17 +289,17 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('大阪', ' 京橋', '京橋', 0, 7, 'https://www.instagram.com/test_content', '/img/Osaka Takoyaki.jpg', 30, 0, 0, 0, 10, "徒歩");
+VALUES ('大阪', '京橋', 'おねえちゃん綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyobashi.jpg', 30, 0, 0, 0, 10, "徒歩");
 
-INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
-stay_time_h,
-stay_time_m,
-used_money,
-move_time_h,
-move_time_m,
-how_move
-)
-VALUES ('大阪', ' なんば', 'なんば', 0, 7, 'https://www.instagram.com/test_content', '/img/Osaka Food Walk.jpg', 30, 0, 0, 0, 10, "徒歩");
+-- INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+-- stay_time_h,
+-- stay_time_m,
+-- used_money,
+-- move_time_h,
+-- move_time_m,
+-- how_move
+-- )
+-- VALUES ('大阪', ' なんば', 'なんば', 0, 7, 'https://www.instagram.com/test_content', '/img/Osaka Food Walk.jpg', 30, 0, 0, 0, 10, "徒歩");
 
 
 

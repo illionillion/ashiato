@@ -32,8 +32,11 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>あしあと</title>
     <!-- BootStrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/okamoto.css" />
     <script src="/js/main.js"></script>
@@ -42,8 +45,8 @@ try {
 <body>
     <main class="row">
         <header class="py-2">
-             <!--写真-->
-        <img src="/img/ashiato.png" alt="Logo" style="width: 100px; height: 100px; object-fit: contain;">
+            <!--写真-->
+            <img src="/img/ashiato.png" alt="Logo" style="width: 100px; height: 100px; object-fit: contain;">
             <!--検索ボックス-->
 
             </div>
@@ -56,29 +59,35 @@ try {
                     </button>
                 </form>
             </div>
-            
-           <!-- 選択ボタン -->
-<div class="d-flex justify-content-center align-items-center gap-5">
-        <?= $_SESSION["user_name"] ?>
-</div>
-    <div class="d-flex justify-content-center align-items-center gap-5">
-    <a href="/api/signout" class="logout">ログアウト</a>
-    </div>
-</div>
 
-            
+            <!-- 選択ボタン -->
+            <div class="d-flex justify-content-center align-items-center gap-5">
+                <?= $_SESSION["user_name"] ?>
+            </div>
+            <div class="d-flex justify-content-center align-items-center gap-5">
+                <a href="/api/signout" class="logout">ログアウト</a>
+            </div>
+            </div>
+
+
         </header>
         <!--テンプレート-->
-        <?php foreach ($bookmarkResult as $key => $value) : ?>
+        <?php foreach ($bookmarkResult as $key => $value): ?>
             <div class="asiatotenp">
                 <a href="/bookmark/?id=<?= $value["bookmark_id"] ?>" class="contents_heading w-100 h-100">
                     <?php
-                        $carousel = new Carousel($value["bookmark_id"]);
-                        $carousel->render();
+                    $carousel = new Carousel($value["bookmark_id"]);
+                    $carousel->render();
                     ?>
-                    <h2 class="asiatoname"><?= $value["bookmark_name"] ?></h2>
-                    <p class="name">投稿者：<?= $value["user_name"] ?></p>
-                    <p class="asiato-desc">概要：<?= $value["bookmark_description"] ?></p>
+                    <h2 class="asiatoname">
+                        <?= $value["bookmark_name"] ?>
+                    </h2>
+                    <p class="name">投稿者：
+                        <?= $value["user_name"] ?>
+                    </p>
+                    <p class="asiato-desc">概要：
+                        <?= $value["bookmark_description"] ?>
+                    </p>
                 </a>
             </div>
         <?php endforeach; ?>
@@ -88,15 +97,15 @@ try {
                 <!-- <button type="button" class="btn btn-primary btn-lg">
                     
                 </button> -->
-                <a href="/create-bookmark" class="btn btn-primary btn-lg">
+                <a href="/create-bookmark" class="ub btn btn-primary btn-lg">
                     Write
                     <img src="/img/pen.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">
 
                 </a>
-                <button type="button" class="btn btn-primary btn-lg">
+                <button type="button" class="ub btn btn-primary btn-lg">
                     My page
                     <img src="/img/goal.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">
-        
+
                 </button>
             </div>
         </footer>

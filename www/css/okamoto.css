@@ -1,44 +1,42 @@
- body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      width: 100%;
-      background-color: rgba(148, 148, 148, 0.7);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-    }
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(148, 148, 148, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
 
-    .left-side {
-      display: flex;
-      align-items: center;
-    }
+.left-side {
+  display: flex;
+  align-items: center;
+}
 
-  
-
- 
-body{
-  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
-  
+body {
+  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro",
+    "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
 }
 .container-fluid {
   padding: 15px 0 15px 0;
   margin: 0 auto;
 }
 
-.search{
+.search {
   width: 100px;
 }
 .searchgo {
   background-color: white;
-  float:right; 
+  float: right;
 }
 
 .like-or-oll {
@@ -47,20 +45,20 @@ body{
 }
 
 /* ヘッダーとフッターの調整 */
-.search{
+.search {
   width: 50px;
 }
-.d-flex{
+.d-flex {
   padding: 0 3rem;
 }
-.py-2{
-  background-color: #83ACC5;
+.py-2 {
+  background-color: #83acc5;
 }
-.gap-5{
+.gap-5 {
   height: 1.2rem;
 }
-.logout{
-  width:90px;
+.logout {
+  width: 90px;
 }
 .picture {
   width: 100%;
@@ -93,11 +91,11 @@ footer {
   right: 0;
   z-index: 10;
   width: 100%;
-  background-color: #83ACC5
+  background-color: #83acc5;
 }
 
 .nuderbotton {
-  padding: 0 0 30px 0;
+  padding: 20px 0 20px 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -163,11 +161,19 @@ p {
 }
 
 .btn-primary,
-        .btn-outline-success {
-          width: 25%;
-            border-color: black;
-            border-width:2px; 
-            color: black;
-            background-color: white
-            
-        }
+.btn-outline-success {
+  width: 25%;
+  border-color: black;
+  border-width: 2px;
+  color: black;
+  background-color: white;
+}
+
+.ub {
+  width: 30%;
+  min-width: 200px;
+  border-color: black;
+  border-width: 2px;
+  color: black;
+  background-color: white;
+}

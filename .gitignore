@@ -34,7 +34,11 @@
 
 # 画像・PDF
 *.pdf
+*.jpg
 *.jpeg
 *.png
+!/www/img/*.jpg
+!/www/img/*.jpeg
+!/www/img/*.png
 
 www/html/~g234201/api/write_login_history/login_history.json

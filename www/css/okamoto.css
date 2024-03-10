@@ -15,6 +15,19 @@ header {
   align-items: center;
   padding: 10px;
 }
+@media (max-width: 420px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+.py-2 {
+  padding: 0 3%;
+}
+
+.logo {
+  padding: 10px;
+}
 
 .left-side {
   display: flex;
@@ -32,11 +45,18 @@ body {
 }
 
 .search {
-  width: 100px;
+  width: 100%;
 }
+
 .searchgo {
   background-color: white;
   float: right;
+  width: 10%;
+  min-width: 60px;
+  border-color: black;
+  border-width: 2px;
+  color: black;
+  background-color: white;
 }
 
 .like-or-oll {
@@ -45,11 +65,8 @@ body {
 }
 
 /* ヘッダーとフッターの調整 */
-.search {
-  width: 50px;
-}
 .d-flex {
-  padding: 0 3rem;
+  padding: 0 4%;
 }
 .py-2 {
   background-color: #83acc5;
@@ -160,18 +177,9 @@ p {
   }
 }
 
-.btn-primary,
-.btn-outline-success {
-  width: 25%;
-  border-color: black;
-  border-width: 2px;
-  color: black;
-  background-color: white;
-}
-
 .ub {
   width: 30%;
-  min-width: 200px;
+  min-width: 180px;
   border-color: black;
   border-width: 2px;
   color: black;

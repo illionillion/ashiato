@@ -45,30 +45,33 @@ try {
 <body>
     <main class="row">
         <header class="py-2">
-            <!--写真-->
-            <img src="/img/ashiato.png" alt="Logo" style="width: 100px; height: 100px; object-fit: contain;">
-            <!--検索ボックス-->
-
+            <div class="si">
+                <!--写真-->
+                <img class="logo" src="/img/ashiato.png" alt="Logo"
+                    style="width: 100px; height: 100px; object-fit: contain;">
+                <!--検索ボックス-->
             </div>
             <div class="container-fluid">
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <input class="search form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <!-- <button class="searchgo btn btn-outline-success" type="submit"> -->
                     <button class="searchgo btn btn-outline-success" type="button">
                         <img src="/img/search.png" alt="" class="search">
                     </button>
                 </form>
             </div>
+            </div>
 
             <!-- 選択ボタン -->
-            <div class="d-flex justify-content-center align-items-center gap-5">
-                <?= $_SESSION["user_name"] ?>
+            <div class="select">
+                <div class="d-flex justify-content-center align-items-center gap-5">
+                    <?= $_SESSION["user_name"] ?>
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-5">
+                    <a href="/api/signout" class="logout">ログアウト</a>
+                </div>
             </div>
-            <div class="d-flex justify-content-center align-items-center gap-5">
-                <a href="/api/signout" class="logout">ログアウト</a>
             </div>
-            </div>
-
 
         </header>
         <!--テンプレート-->

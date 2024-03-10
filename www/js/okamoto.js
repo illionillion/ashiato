@@ -4,5 +4,5 @@ function plus() {
   document.getElementById("pre").textContent = count;
 }
 window.addEventListener("load", function () {
-  document.getElementById("plus").addEventListener("click", plus);
+  //document.getElementById("plus").addEventListener("click", plus);
 });

@@ -1,0 +1,35 @@
+.one {
+  padding: 20px 0;
+  background-color: rgb(243, 243, 243);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.content-header {
+  margin: 0 10%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contentimg {
+  width: 100%;
+  border-radius: 7vw;
+}
+
+.contentname {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  color: white;
+  width: 8vw;
+  font-weight: bold;
+  font-size: 16vw;
+}
+
+.contentcoment {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  color: white;
+  font-weight: bold;
+  font-size: 6vw;
+}

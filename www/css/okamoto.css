@@ -89,6 +89,7 @@ p {
   font-size: 3rem;
   margin: 0 !important; /*文字がずれている場合や*/
   padding: 0 !important; /*文字が折り返される場合*/
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
 .contents_heading p {
   right: 10%;

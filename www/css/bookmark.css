@@ -41,9 +41,10 @@ main h1 {
   left: 10%;
   color: white;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3rem;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 .contentcoment {

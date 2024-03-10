@@ -65,17 +65,19 @@ main h1 {
 
   .bottom {
     .left {
+      background-image: url(/img/arrow.png);
+      background-size: cover;
       height: 100%;
       .arrow {
         width: 10px;
-        height: 300px;
+        min-height: 300px;
         background-color: #111;
         margin: auto;
         position: relative;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         &::after {
-          content: '';
+          content: "";
           bottom: 0;
           transform: translate(-50%, 15%);
           position: absolute;

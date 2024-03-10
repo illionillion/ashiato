@@ -100,13 +100,17 @@ INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('大阪', '名所巡り', 6);
 
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
-VALUES ('Osaka', 'food', 5);
+VALUES ('食べ歩き', 'food', 5);
 
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('京都花見', '#京都 ＃観光', 7);
 
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('大阪カメラ旅', '#大阪 ＃カメラ', 7);
+
+INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
+VALUES ('京都カメラ旅', '#京都 ＃カメラ', 7);
+
 -- しおり内のコンテンツを追加
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -127,6 +131,16 @@ move_time_m,
 how_move
 )
 VALUES ('京都駅前', ' 京都', 'まいこさん', 10, 1, 'https://www.instagram.com/test_content', '/img/maiko.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('祗園', ' 京都', '風情ある街並み', 10, 1, 'https://www.instagram.com/test_content', '/img/Gion.png', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -206,10 +220,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('愛知', '〒450-0002愛知県名古屋市中村区名駅1丁目1-4', '景色', 1000, 6, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 30, 50, 1, 00, "名古屋駅から電車");
-
-
-
+VALUES ('愛知', '〒450-0002愛知県名古屋市中村区名駅1丁目1-4', '景色', 1000, 5, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 30, 50, 1, 00, "名古屋駅から電車");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -249,7 +260,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '北野天満宮', 'まいこさん', 0, 8, 'https://www.instagram.com/test_content', '/img/Kyoto Han.png', 0, 30, 0, 0, 10, "徒歩");
+VALUES ('京都花見', '北野天満宮', 'まいこさん', 0, 8, 'https://www.instagram.com/test_content', '/img/Kyoto_Han.png', 0, 30, 0, 0, 10, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -289,7 +300,77 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('大阪', '京橋', 'おねえちゃん綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyobashi.jpg', 30, 0, 0, 0, 10, "徒歩");
+VALUES ('京橋', '京橋', 'おねえちゃん綺麗', 0, 6, 'https://www.instagram.com/test_content', '/img/Kyobashi.jpg', 30, 0, 0, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('たこ焼き', '道頓堀', '出来立て', 0, 7, 'https://www.instagram.com/test_content', '/img/Osaka_Takoyaki.jpg', 30, 0, 0, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('食べ歩き', '道頓堀', '食い倒れ', 0, 7, 'https://www.instagram.com/test_content', '/img/Osaka_Food_Walk.jpg', 30, 0, 0, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('道頓堀', '道頓堀', 'たこ焼き', 0, 6, 'https://www.instagram.com/test_content', '/img/Osaka_Food_Walk.jpg', 30, 0, 0, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('宝ヶ池公園', '-', '国際会館', 0, 10, 'https://www.instagram.com/test_content', '/img/kokusaikaikan.png', 30, 0, 0, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('鴨川', '-', 'はと寒そう', 0, 10, 'https://www.instagram.com/test_content', '/img/hato.png', 30, 0, 0, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('嵐山', '-', '夜の紅葉', 0, 10, 'https://www.instagram.com/test_content', '/img/arashi.png', 30, 0, 0, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('伏見稲荷', '-', 'パワースポット', 0, 10, 'https://www.instagram.com/test_content', '/img/hushimi.png', 30, 0, 0, 0, 10, "徒歩");
 
 -- INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 -- stay_time_h,

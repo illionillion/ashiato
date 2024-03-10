@@ -59,7 +59,6 @@ VALUES ('JohnDoe2', SHA2('password', 256), 'john-doe2@example.com');
 
 INSERT INTO user (user_name, password, email)
 VALUES ('wataru', SHA2('aaaa', 256), 'wataru@example.com');
-
 INSERT INTO user (user_name, password, email)
 VALUES ('LionelMessi', SHA2('11', 256), 'goot@example.com');
 
@@ -68,6 +67,9 @@ VALUES ('gotumoritakesi', SHA2('gotumori', 256), 'takesi@example.com');
 
 INSERT INTO user (user_name, password, email)
 VALUES ('hetaredaimaou', SHA2('Yu1128145', 256), 'hanadekayu@icloud.com');
+
+INSERT INTO user (user_name, password, email)
+VALUES ('Luis Suárez ', SHA2('soccer', 256), 'soccerolayer@icloud.com');
 
 -- しおりを追加
 -- INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
@@ -93,13 +95,14 @@ VALUES ('博多旅行', '美味しい料理', 2);
 
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('沖縄', '沖縄美ら海水族館', 2);
-
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('日帰り愛知', '名所巡り', 6);
 
 INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
 VALUES ('みんなでドライブ', '免許持ってないけど！', 5);
 
+INSERT INTO bookmark (bookmark_name, bookmark_description, user_id)
+VALUES ('京都花見', '#京都 ＃観光', 7);
 
 -- しおり内のコンテンツを追加
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
@@ -201,6 +204,48 @@ move_time_m,
 how_move
 )
 VALUES ('淡路島までドライブ', '淡路島', 'ドライブたのしい', 2000, 7, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 0, 20, 0, 2, 00, "車");
+
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('京都花見', '城南宮', '花綺麗', 1100, 7, 'https://www.instagram.com/test_content', '/img/Jonangu.jpg', 1, 30, 1100, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('京都花見', '庭園', '綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoyto Hanami Garden.jpg', 0, 30, 0, 0, 10, "徒歩");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('京都花見', '下鴨神社', '綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoto Han.jpg', 1, 00, 0, 0, 40, "電車");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('京都花見', '北野天満宮', '花が綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 0, 30, 0, 0, 10, "徒歩");
+
 -- しおり内コンテンツの画像を追加
 -- INSERT INTO bookmark_content_image (bookmark_content_image_path, bookmark_content_id)
 -- VALUES ('/image/sample1.jpg', 1);

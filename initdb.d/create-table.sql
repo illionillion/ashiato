@@ -224,7 +224,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '庭園', '綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoyto Hanami Garden.jpg', 0, 30, 0, 0, 10, "徒歩");
+VALUES ('京都花見', '庭園', '綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoto_Hanami_Garden.jpg', 0, 30, 0, 0, 10, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -234,7 +234,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '下鴨神社', '綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoto Han.jpg', 1, 00, 0, 0, 40, "電車");
+VALUES ('京都花見', '下鴨神社', '綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 1, 00, 0, 0, 40, "電車");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,

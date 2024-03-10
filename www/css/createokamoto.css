@@ -1,0 +1,115 @@
+/* *{
+    outline: 1px solid;
+}
+
+*/
+form.row {
+  width: 100%;
+  max-width: 75vw;
+}
+
+.create {
+  color: #a9ceec;
+  padding: 20px;
+}
+
+label {
+  color: #a9ceec;
+}
+
+.tennnouzi {
+  color: white;
+  background-color: #a9ceec;
+}
+.nanpa {
+  color: white;
+  background-color: #a9ceec;
+}
+
+.carousel-inner {
+  padding: 0 20vw;
+  border-radius: 5vw;
+}
+
+.stay-time {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.stay-time p {
+  display: inline-block;
+}
+
+.used-price {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.used-price p {
+  display: inline-block;
+}
+
+.address {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.address p {
+  display: inline-block;
+}
+
+.comment {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.comment p {
+  display: inline-block;
+}
+.comment pre {
+  width: 100%;
+  white-space: pre-line;
+  word-break: break-all;
+}
+
+.price {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.price p {
+  display: inline-block;
+}
+
+.move-time {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.move-time p {
+  display: inline-block;
+}
+
+.how-move {
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.how-move p {
+  display: inline-block;
+}
+
+.abouts {
+  width: 100px;
+}
+
+.preview img {
+  height: 300px !important;
+}

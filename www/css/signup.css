@@ -1,0 +1,53 @@
+header {
+  width: 50%;
+  height: 45px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+.title {
+  color: #a9ceec;
+}
+.rogo {
+  color: #a9ceec;
+}
+
+.ready {
+  width: 60%;
+  margin: 20px auto;
+}
+.ready p {
+  float: right;
+}
+.ready a {
+  float: right;
+}
+
+.in input {
+  width: 40%;
+  margin: 30px auto;
+  display: block;
+  border-radius: 10px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .ready,
+  .in input {
+    width: 100%;
+  }
+}
+
+.go {
+  background-color: #a9ceec;
+}
+
+.error {
+  color: rgb(255, 140, 0);
+  text-align: center;
+  line-height: 40px;
+}

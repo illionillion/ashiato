@@ -16,11 +16,13 @@
                     <div class="staying-time w-100 text-center">滞在時間：<?= $card["stay_time_h"] ?>時間<?= $card["stay_time_m"] ?>分</div>
                 </div>
                 <div class="bottom d-flex justify-content-center align-items-center gap-3">
-                    <div class="left w-100 arrow text-center">↓</div>
-                    <div class="right w-100 text-center">
+                    <div class="left w-50 arrow text-center">
+                        <div class="<?= $i < (count($cards) - 1) ? "arrow" : "" ?>"></div>
+                    </div>
+                    <div class="right w-50 text-center">
                         <div class="transportation"><?= $card["how_move"] ?></div>
-                        <div class="moving-time"><?= $card["move_time_h"] ?>時間<?= $card["move_time_m"] ?>分</div>
-                        <div class="fee"><?= $card["used_money"] ?>円</div>
+                        <div class="moving-time">移動時間：<?= $card["move_time_h"] ?>時間<?= $card["move_time_m"] ?>分</div>
+                        <div class="fee">交通費：<?= $card["used_money"] ?>円</div>
                     </div>
                 </div>
             </div>

@@ -120,10 +120,20 @@ window.addEventListener("load", () => {
     image_input.name = `bookmark_content[${placeCount}][${
       document.getElementById("image-input").id
     }]`;
-    image_input.type = "file";
-    image_input.classList.add("d-none");
-    image_input.files = image_file;
-    console.log(image_input.files);
+    image_input.type = "hidden";
+
+    // base64
+    const img = new Image();
+    img.src = image;
+    const canvas = document.createElement('canvas');
+    canvas.width  = img.width;
+    canvas.height = img.height;
+    // Draw Image
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    // To Base64
+    const base64 = canvas.toDataURL("image/jpeg");
+    image_input.value = base64; // ここでbase64に変換したやつ入れる
 
     // placeにマウント
     document.getElementById("place").appendChild(place_name_input);
@@ -151,8 +161,7 @@ window.addEventListener("load", () => {
     const clone = template.content.cloneNode(true);
     // previewにスライダーを挿入
     accordion.appendChild(clone);
-    const img = new Image();
-    img.src = image;
+    
     img.classList.add("d-block", "w-100", "h-100", "object-fit-contain");
     const slider = document.querySelector(
       `.accordion-item:nth-child(${placeCount + 1}) .carousel-inner`

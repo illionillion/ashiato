@@ -31,6 +31,12 @@ CREATE TABLE bookmark_content (
     bookmark_id INT NOT NULL,
     bookmark_instagram_url VARCHAR(255) NOT NULL,
     bookmark_content_image_path LONGTEXT NOT NULL,
+    stay_time_h INT NOT NULL,
+    stay_time_m INT NOT NULL,
+    used_money INT NOT NULL,
+    move_time_h INT NOT NULL,
+    move_time_m INT NOT NULL,
+    how_move VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT NOW(),
     FOREIGN KEY (bookmark_id) REFERENCES bookmark(bookmark_id)
 );
@@ -81,26 +87,75 @@ VALUES ('沖縄', '沖縄美ら海水族館', 2);
 
 
 -- しおり内のコンテンツを追加
-INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path)
-VALUES ('難波', '大阪府難波', '商店街で食べ歩き', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg');
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('難波', '大阪府難波', '商店街で食べ歩き', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
-INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path)
-VALUES ('心斎橋', ' 大阪府大阪市', 'お洒落な居酒屋', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg');
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('心斎橋', ' 大阪府大阪市', 'お洒落な居酒屋', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
-INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path)
-VALUES ('道頓堀', ' 大阪府大阪市', '綺麗な橋', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg');
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('道頓堀', ' 大阪府大阪市', '綺麗な橋', 10, 1, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
-INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path)
-VALUES ('スカイツリー', '〒131-0045 東京都墨田区押上１丁目１−２', 'タワー', 162000, 2, 'https://www.instagram.com/test_content', '/img/sample1.jpg');
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('スカイツリー', '〒131-0045 東京都墨田区押上１丁目１−２', 'タワー', 162000, 2, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
-INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path)
-VALUES ('小樽', '〒047-0032 北海道小樽市稲穂３丁目１０−１６', '三角市場', 5990, 3, 'https://www.instagram.com/test_content', '/img/sample1.jpg');
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('小樽', '〒047-0032 北海道小樽市稲穂３丁目１０−１６', '三角市場', 5990, 3, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
-INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path)
-VALUES ('博多旅行', '福岡県福岡市博多区築港本町１４－１', '博多ポートタワー', 3330, 4, 'https://www.instagram.com/test_content', '/img/sample1.jpg');
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('博多旅行', '福岡県福岡市博多区築港本町１４－１', '博多ポートタワー', 3330, 4, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
-INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path)
-VALUES ('沖縄旅行', '〒905-0206 沖縄県国頭郡本部町石川４２４', '美ら海水族館', 19700, 5, 'https://www.instagram.com/test_content', '/img/sample1.jpg');
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
+VALUES ('沖縄旅行', '〒905-0206 沖縄県国頭郡本部町石川４２４', '美ら海水族館', 19700, 5, 'https://www.instagram.com/test_content', '/img/sample1.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 -- しおり内コンテンツの画像を追加
 -- INSERT INTO bookmark_content_image (bookmark_content_image_path, bookmark_content_id)

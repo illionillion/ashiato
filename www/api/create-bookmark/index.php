@@ -41,21 +41,53 @@ try {
     $stmt->execute();
 
     $bookmark_id = $pdo->lastInsertId();
-
+    
     // bookmark_content追加
     foreach ($bookmark_content as $key => $value) {
         // 配列内の各要素を処理する
         if (is_array($value)) {
+
             // ネストされた配列の場合
-            $stmt = $pdo->prepare("INSERT INTO bookmark_content ( bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url ) values (:bookmark_content_name, :bookmark_content_address, :bookmark_content_comment, :bookmark_content_price, :bookmark_id, '-')");
+            $stmt = $pdo->prepare("INSERT INTO bookmark_content (
+            bookmark_content_name,
+            bookmark_content_address,
+            bookmark_content_comment,
+            bookmark_content_price,
+            stay_time_h,
+            stay_time_m,
+            used_money,
+            move_time_h,
+            move_time_m,
+            how_move,
+            bookmark_content_image_path,
+            bookmark_id, bookmark_instagram_url
+            ) VALUES (
+            :bookmark_content_name,
+            :bookmark_content_address,
+            :bookmark_content_comment,
+            :bookmark_content_price,
+            :stay_time_h,
+            :stay_time_m,
+            :used_money,
+            :move_time_h,
+            :move_time_m,
+            :how_move,
+            :bookmark_content_image_path,
+            :bookmark_id,
+            '-')");
             $stmt->bindParam(':bookmark_content_name', $value["place-name"], PDO::PARAM_STR);
             $stmt->bindParam(':bookmark_content_address', $value["place-address"], PDO::PARAM_STR);
             $stmt->bindParam(':bookmark_content_comment', $value["place-comment"], PDO::PARAM_STR);
             $stmt->bindParam(':bookmark_content_price', $value["expenses"], PDO::PARAM_INT);
+            $stmt->bindParam(':stay_time_h', $value["stay-time-h"], PDO::PARAM_INT);
+            $stmt->bindParam(':stay_time_m', $value["stay-time-m"], PDO::PARAM_INT);
+            $stmt->bindParam(':used_money', $value["used-money"], PDO::PARAM_INT);
+            $stmt->bindParam(':move_time_h', $value["move-time-h"], PDO::PARAM_INT);
+            $stmt->bindParam(':move_time_m', $value["move-time-m"], PDO::PARAM_INT);
+            $stmt->bindParam(':how_move', $value["how-move"], PDO::PARAM_INT);
+            $stmt->bindParam(':bookmark_content_image_path', $value["image-input"], PDO::PARAM_STR);
             $stmt->bindParam(':bookmark_id', $bookmark_id, PDO::PARAM_INT);
             $stmt->execute();
-
-            // 画像の保存
         }
     }
 

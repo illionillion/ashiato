@@ -47,7 +47,7 @@ try {
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <!-- <button class="searchgo btn btn-outline-success" type="submit"> -->
                     <button class="searchgo btn btn-outline-success" type="button">
-                        検索
+                        <img src="/img/icon/search.png" alt="" class="search">
                     </button>
                 </form>
             </div>

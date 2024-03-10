@@ -6,9 +6,12 @@ header {
   width: 100%;
   background-color: rgba(148, 148, 148, 0.7);
 }
-
+body{
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  
+}
 .container-fluid {
-  padding: 30px 0 30px 0;
+  padding: 15px 0 15px 0;
   margin: 0 auto;
 }
 
@@ -19,6 +22,19 @@ header {
 .like-or-oll {
   width: 300px;
   margin: 0 auto;
+}
+/* ヘッダーとフッターの調整 */
+.search{
+  width: 20px;
+}
+.d-flex{
+  padding: 0 3rem;
+}
+.py-2{
+  background-color: #83ACC5;
+}
+.gap-5{
+  height: 1.2rem;
 }
 
 
@@ -76,7 +92,6 @@ footer {
   height: 570px;
 
   position: relative;
-  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
   font-weight: bolder;
 }
 @media (max-width:380px) {
@@ -110,6 +125,11 @@ footer {
   padding: 0!important;/*文字が折り返される場合*/
 }
 .contents_heading p{
-  top: 90%;
   right: 10%;
+}
+p[class="name"]{
+  top: 85%;
+}
+p[class="asiato-desc"]{
+  top: 90%;
 }

@@ -1,6 +1,7 @@
 <?php
 include "./lib/session_check.php";
 include "./lib/connect_db.php";
+include "./components/carousel/index.php";
 
 session_check();
 
@@ -60,11 +61,12 @@ try {
         <!--テンプレート-->
         <?php foreach ($bookmarkResult as $key => $value) : ?>
             <div class="asiatotenp">
-                <a href="/bookmark/?id=<?= $value["bookmark_id"] ?>" class="contents_heading">
-                    <img src="/img/osaka.jpg" class="image-preview" alt="">
-                    <!--しおり名：-->
+                <a href="/bookmark/?id=<?= $value["bookmark_id"] ?>" class="contents_heading w-100 h-100">
+                    <?php
+                        $carousel = new Carousel($value["bookmark_id"]);
+                        $carousel->render();
+                    ?>
                     <h2 class="asiatoname"><?= $value["bookmark_name"] ?></h2>
-
                     <p class="name">投稿者：<?= $value["user_name"] ?></p>
                     <p class="asiato-desc">概要：<?= $value["bookmark_description"] ?></p>
                 </a>

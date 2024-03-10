@@ -65,12 +65,11 @@ main h1 {
 
   .bottom {
     .left {
-      background-image: url(/img/arrow.png);
-      background-size: cover;
       height: 100%;
       .arrow {
         width: 10px;
-        min-height: 300px;
+        height: 100%;
+        min-height: 100px;
         background-color: #111;
         margin: auto;
         position: relative;

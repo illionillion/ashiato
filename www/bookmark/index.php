@@ -3,6 +3,8 @@ include "../lib/session_check.php";
 include "../lib/connect_db.php";
 include "../components/cards/index.php";
 include "../components/header/index.php";
+include "../components/footer/index.php";
+
 
 session_check();
 
@@ -58,6 +60,7 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/bookmark.css" />
     <link rel="stylesheet" href="/css/okamotobookmark.css" />
     <script src="/js/main.js"></script>
@@ -67,16 +70,22 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
 <body>
     <main class="w-100 row m-auto">
         <?php
-            $header = new Header();
-            $header->render();
+        $header = new Header();
+        $header->render();
         ?>
         <h1 class="text-center text-dark">
             <?= $currentBookmark["bookmark_name"] ?>
         </h1>
-        <p class="hashtag text-center text-black"><?= $currentBookmark["bookmark_description"] ?></p>
+        <p class="hashtag text-center text-black">
+            <?= $currentBookmark["bookmark_description"] ?>
+        </p>
         <?php
         $cards = new Cards($currentBookmark["bookmark_id"]);
         $cards->render();
+        ?>
+        <?php
+        $header = new Footer();
+        $header->render();
         ?>
     </main>
 </body>

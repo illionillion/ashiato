@@ -3,6 +3,7 @@ include "./lib/session_check.php";
 include "./lib/connect_db.php";
 include "./components/carousel/index.php";
 include "./components/header/index.php";
+include "./components/footer/index.php";
 
 session_check();
 
@@ -47,8 +48,8 @@ try {
 <body>
     <main class="row">
         <?php
-            $header = new Header();
-            $header->render();
+        $header = new Header();
+        $header->render();
         ?>
         <!--テンプレート-->
         <?php foreach ($bookmarkResult as $key => $value): ?>
@@ -71,20 +72,10 @@ try {
             </div>
         <?php endforeach; ?>
         <!--下のボタン-->
-        <footer>
-            <div class="nuderbotton">
-                <a href="/create-bookmark" class="ub btn btn-primary btn-lg">
-                    Write
-                    <img src="/img/pen.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">
-
-                </a>
-                <button type="button" class="ub btn btn-primary btn-lg">
-                    My page
-                    <img src="/img/goal.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">
-
-                </button>
-            </div>
-        </footer>
+        <?php
+        $header = new Footer();
+        $header->render();
+        ?>
 
     </main>
 </body>

@@ -145,6 +145,16 @@ move_time_h,
 move_time_m,
 how_move
 )
+VALUES ('博多', '博多', 'カフェ', 10, 4, 'https://www.instagram.com/test_content', '/img/cafe.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
+
+INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
+stay_time_h,
+stay_time_m,
+used_money,
+move_time_h,
+move_time_m,
+how_move
+)
 VALUES ('滋賀', '滋賀', 'カフェ2', 162000, 2, 'https://www.instagram.com/test_content', '/img/Hackathon Roz.jpg', 1, 20, 3000, 0, 20, "地下鉄で移動");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,

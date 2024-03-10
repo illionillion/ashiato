@@ -20,10 +20,9 @@
                                 placeholder="住所を入力" />
                         </div>
                         <div class="w-100 form-label">
-                            <label for="image-input" class="text-center">画像を追加</label>
-                            <input type="file" name="" id="image-input" accept="image/png, image/jpeg"
-                                class="d-none" />
-                            <div id="preview"></div>
+                            <label for="image-input" class="btn btn-secondary text-center">画像を追加</label>
+                            <input type="file" name="" id="image-input" accept="image/png, image/jpeg" class="d-none" />
+                            <div class="preview" id="preview"></div>
                         </div>
                         <div class="w-100 form-label">
                             <label for="place-comment" class="w-100 mb-1">ひとこと</label>
@@ -32,21 +31,27 @@
                         </div>
                         <div class="w-100 form-label">
                             <label for="" class="w-100 mb-1">滞在時間</label>
-                            <input type="number" id="stay-time-h" name="stay-time-h" class="form-control w-100" placeholder="**時間" />
-                            <input type="number" id="stay-time-m" name="stay-time-m" class="form-control w-100" placeholder="**分" />
+                            <input type="number" id="stay-time-h" name="stay-time-h" class="form-control w-100"
+                                placeholder="**時間" />
+                            <input type="number" id="stay-time-m" name="stay-time-m" class="form-control w-100"
+                                placeholder="**分" />
                         </div>
                         <div class="w-100 form-label">
                             <label for="used-money" class="w-100 mb-1">使ったお金</label>
-                            <input type="number" id="used-money" name="used-money" class="form-control w-100" placeholder="**円" />
+                            <input type="number" id="used-money" name="used-money" class="form-control w-100"
+                                placeholder="**円" />
                         </div>
                         <div class="w-100 form-label">
                             <label for="expenses" class="w-100 mb-1">交通費</label>
-                            <input type="number" id="expenses" name="expenses" class="form-control w-100" placeholder="**円" />
+                            <input type="number" id="expenses" name="expenses" class="form-control w-100"
+                                placeholder="**円" />
                         </div>
                         <div class="w-100 form-label">
                             <label for="" class="w-100 mb-1">移動時間</label>
-                            <input type="number" id="move-time-h" name="move-time-h" class="form-control w-100" placeholder="**時間" />
-                            <input type="number" id="move-time-m" name="move-time-m" class="form-control w-100" placeholder="**分" />
+                            <input type="number" id="move-time-h" name="move-time-h" class="form-control w-100"
+                                placeholder="**時間" />
+                            <input type="number" id="move-time-m" name="move-time-m" class="form-control w-100"
+                                placeholder="**分" />
                         </div>
                         <div class="w-100 form-label">
                             <label for="how-move" class="w-100 mb-1">移動手段</label>

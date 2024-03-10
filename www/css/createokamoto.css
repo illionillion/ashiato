@@ -26,23 +26,28 @@ label {
   background-color: #a9ceec;
 }
 
-.staytime {
+.carousel-inner {
+  padding: 0 20vw;
+  border-radius: 5vw;
+}
+
+.stay-time {
   margin: 0 20px;
   padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.staytime p {
+.stay-time p {
   display: inline-block;
 }
 
-.usedprice {
+.used-price {
   margin: 0 20px;
   padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.usedprice p {
+.used-price p {
   display: inline-block;
 }
 
@@ -81,25 +86,30 @@ label {
   display: inline-block;
 }
 
-.movetime {
+.move-time {
   margin: 0 20px;
   padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.movetime p {
+.move-time p {
   display: inline-block;
 }
 
-.howmove {
+.how-move {
   margin: 0 20px;
   padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.howmove p {
+.how-move p {
   display: inline-block;
 }
 
 .abouts {
   width: 100px;
+}
+
+.preview img {
+  height: 300px !important;
 }

@@ -24,7 +24,7 @@ session_check();
 
 <body>
   <main class="container d-flex justify-content-center">
-    <form action="/api/create-bookmark/index.php" class="row" method="POST">
+    <form action="/api/create-bookmark/index.php" enctype="multipart/form-data" class="row" method="POST">
       <h1 class="create text-center">しおり作成</h1>
       <div class="w-100 form-label">
         <label for="bookmark-name" class="w-100 mb-1">しおり名</label>

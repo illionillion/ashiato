@@ -53,8 +53,9 @@ try {
             $stmt->bindParam(':bookmark_content_comment', $value["place-comment"], PDO::PARAM_STR);
             $stmt->bindParam(':bookmark_content_price', $value["expenses"], PDO::PARAM_INT);
             $stmt->bindParam(':bookmark_id', $bookmark_id, PDO::PARAM_INT);
-            // $stmt->bindParam(':bookmark_instagram_url', "-", PDO::PARAM_STR);
             $stmt->execute();
+
+            // 画像の保存
         }
     }
 

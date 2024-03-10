@@ -63,11 +63,11 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
 </head>
 
 <body>
-    <main class="container row m-auto">
-        <h1 class="text-center text-white">
+    <main class="w-100 row m-auto">
+        <h1 class="text-center text-dark">
             <?= $currentBookmark["bookmark_name"] ?>
         </h1>
-        <p class="hashtag text-center text-black">ハッシュタグ</p>
+        <!-- <p class="hashtag text-center text-black">ハッシュタグ</p> -->
         <?php
         $cards = new Cards($currentBookmark["bookmark_id"]);
         $cards->render();

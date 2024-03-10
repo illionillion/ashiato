@@ -73,7 +73,8 @@ footer {
   height: 570px;
   /* margin: 2rem auto; */
   margin-inline: auto;
-  padding-block: 10px;
+  margin-block: 10px;
+  padding-inline: 0;
   /* padding: 0px 10px 40px 0px; */
   border-radius: 10px;
   background-color: white;

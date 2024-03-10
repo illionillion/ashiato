@@ -44,35 +44,24 @@ try {
 
 <body>
     <main class="row">
-        <header class="py-2">
-            <div class="si">
-                <!--写真-->
-                <img class="logo" src="/img/ashiato.png" alt="Logo"
-                    style="width: 100px; height: 100px; object-fit: contain;">
-                <!--検索ボックス-->
+        <header class="py-2 px-5">
+            <div class="logo-icon">
+                <img src="/img/ashiato.png" alt="ロゴアイコン">
             </div>
-            <div class="container-fluid">
-                <form class="d-flex">
-                    <input class="search form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <!-- <button class="searchgo btn btn-outline-success" type="submit"> -->
-                    <button class="searchgo btn btn-outline-success" type="button">
-                        <img src="/img/search.png" alt="" class="search">
+            <div class="search-box d-flex justify-content-around align-items-center gap-2">
+                <form action="/" class="d-flex">
+                    <input type="search" name="keyword" placeholder="Search" class="search form-control">
+                    <button class="search-btn btn btn-outline-success" type="search">
+                        <img src="/img/search.png" class="btn" alt="">
                     </button>
                 </form>
-            </div>
-            </div>
-
-            <!-- 選択ボタン -->
-            <div class="select">
-                <div class="d-flex justify-content-center align-items-center gap-5">
-                    <?= $_SESSION["user_name"] ?>
-                </div>
-                <div class="d-flex justify-content-center align-items-center gap-5">
-                    <a href="/api/signout" class="logout">ログアウト</a>
+                <div class="user-control d-flex row justify-content-center align-items-center gap-1">
+                    <div class="user-name-display text-end"><?= $_SESSION["user_name"] ?></div>
+                    <div class="text-end">
+                        <a href="/api/signout" class="btn btn-secondary">ログアウト</a>
+                    </div>
                 </div>
             </div>
-            </div>
-
         </header>
         <!--テンプレート-->
         <?php foreach ($bookmarkResult as $key => $value): ?>
@@ -97,9 +86,6 @@ try {
         <!--下のボタン-->
         <footer>
             <div class="nuderbotton">
-                <!-- <button type="button" class="btn btn-primary btn-lg">
-                    
-                </button> -->
                 <a href="/create-bookmark" class="ub btn btn-primary btn-lg">
                     Write
                     <img src="/img/pen.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">

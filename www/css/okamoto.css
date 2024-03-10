@@ -1,7 +1,3 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
 
 header {
   position: sticky;
@@ -9,71 +5,52 @@ header {
   left: 0;
   z-index: 10;
   width: 100%;
-  background-color: rgba(148, 148, 148, 0.7);
+  background-color: #83acc5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
 }
-@media (max-width: 420px) {
-  header {
-    flex-direction: column;
+
+.logo-icon {
+  @media (max-width: 470px) {
+    display: none;
+  }
+  min-width: 80px;
+  min-height: 80px;
+  width: 80px;
+  height: 80px;
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
 
-.py-2 {
-  padding: 0 3%;
+.search-box {
+  .search {
+    min-width: 150px;
+    width: 100%;
+    height: 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .search-btn {
+    width: 50px;
+    height: 50px;
+    padding: 0 !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;  
+    img.btn {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 0 !important;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;  
+    }
+  }
 }
 
-.logo {
-  padding: 10px;
-}
-
-.left-side {
-  display: flex;
-  align-items: center;
-}
-
-body {
-  font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro",
-    "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro W3",
-    "Hiragino Kaku Gothic Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
-}
-.container-fluid {
-  padding: 15px 0 15px 0;
-  margin: 0 auto;
-}
-
-.search {
-  width: 100%;
-}
-
-.searchgo {
-  background-color: white;
-  float: right;
-  width: 10%;
-  min-width: 60px;
-  border-color: black;
-  border-width: 2px;
-  color: black;
-  background-color: white;
-}
-
-.like-or-oll {
-  width: 300px;
-  margin: 0 auto;
-}
-
-/* ヘッダーとフッターの調整 */
-.d-flex {
-  padding: 0 4%;
-}
-.py-2 {
-  background-color: #83acc5;
-}
-.gap-5 {
-  height: 1.2rem;
-}
 .logout {
   width: 90px;
 }

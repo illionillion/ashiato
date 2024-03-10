@@ -39,7 +39,7 @@ try {
 </head>
 
 <body>
-    <main class="container row m-auto">
+    <main class="row">
         <header class="py-2">
             <!--検索ボックス-->
             <div class="container-fluid">
@@ -60,13 +60,13 @@ try {
         <!--テンプレート-->
         <?php foreach ($bookmarkResult as $key => $value) : ?>
             <div class="asiatotenp">
-                <a href="/bookmark/?id=<?= $value["bookmark_id"] ?>">
-                    <div class="name">投稿者：<?= $value["user_name"] ?></div>
-                    <div class="picture">
-                        <img src="/img/sample1.jpg" class="image-preview" alt="">
-                    </div>
-                    <div class="asiatoname">しおり名：<?= $value["bookmark_name"] ?></div>
-                    <div class="asiato-desc">概要：<?= $value["bookmark_description"] ?></div>
+                <a href="/bookmark/?id=<?= $value["bookmark_id"] ?>" class="contents_heading">
+                    <img src="/img/osaka.jpg" class="image-preview" alt="">
+                    <!--しおり名：-->
+                    <h2 class="asiatoname"><?= $value["bookmark_name"] ?></h2>
+
+                    <p class="name">投稿者：<?= $value["user_name"] ?></p>
+                    <p class="asiato-desc">概要：<?= $value["bookmark_description"] ?></p>
                 </a>
             </div>
         <?php endforeach; ?>

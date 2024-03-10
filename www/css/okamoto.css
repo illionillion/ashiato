@@ -9,7 +9,6 @@ header {
 
 .container-fluid {
   padding: 30px 0 30px 0;
-  width: 500px;
   margin: 0 auto;
 }
 
@@ -22,18 +21,7 @@ header {
   margin: 0 auto;
 }
 
-.asiatotenp {
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-  padding: 10px 10px 40px 10px;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: white;
-}
-.asiatotenp p {
-  padding-left: 30px;
-}
+
 .picture {
   width: 100%;
   min-width: 200px;
@@ -76,4 +64,52 @@ footer {
   align-items: center;
   gap: 1.2rem;
   margin: 0 auto;
+}
+
+.asiatotenp {
+  display: block;
+  width: 380px;
+  margin: 2rem auto;
+  padding: 0px 10px 40px 0px;
+  border-radius: 10px;
+  background-color: white;
+  height: 570px;
+
+  position: relative;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  font-weight: bolder;
+}
+@media (max-width:380px) {
+  .asiatotenp {
+    width: 90%;
+    border-radius: 10px;
+  }
+}
+.asiatotenp p {
+  padding-left: 30px;
+}
+.asiatotenp img{
+  width: 100%;
+  height: 100%;
+  border-radius: 44px;
+}
+
+.contents_heading{
+  position: absolute;
+}
+.contents_heading h2,p{
+  position: absolute;
+  color: white;
+}
+.contents_heading h2{
+  writing-mode: vertical-rl;
+  top: 10%;
+  left: 10%;
+  font-size: 3rem;
+  margin: 0!important;/*文字がずれている場合や*/
+  padding: 0!important;/*文字が折り返される場合*/
+}
+.contents_heading p{
+  top: 90%;
+  right: 10%;
 }

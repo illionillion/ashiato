@@ -18,7 +18,7 @@ try {
     b.user_id,
     b.created_at,
     u.user_name
-    FROM bookmark b JOIN user u ON b.user_id = u.user_id WHERE b.user_id = :user_id ORDER BY b.bookmark_id");
+    FROM bookmark b JOIN user u ON b.user_id = u.user_id WHERE b.user_id = :user_id");
     $bookmarkQuery->bindParam(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
     // クエリを実行
     $bookmarkQuery->execute();

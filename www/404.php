@@ -20,16 +20,6 @@
 
         <img src="/img/backgrounding.png" class="bg-img" alt="" srcset="">
 
-        <!-- <h1 class="header">考えられる原因<h1>
-            
-        <font size="5" class="pos" >◯リンクが更新されている可能性がある。</font>
-        <br>
-        <font size="5" class="pos">◯存在しない。</font>
-        <br>
-        <font size="5" class="pos">◯など。</font>
-        <img src="/img/404.jpeg"  alt="404" class="pic"> -->
-
-        
     </main>
 </body>
 

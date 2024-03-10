@@ -214,7 +214,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '城南宮', '花綺麗', 1100, 7, 'https://www.instagram.com/test_content', '/img/Jonangu.jpg', 1, 30, 1100, 0, 10, "徒歩");
+VALUES ('京都花見', '城南宮', '花綺麗', 1100, 8, 'https://www.instagram.com/test_content', '/img/Jonangu.jpg', 1, 30, 1100, 0, 10, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -224,7 +224,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '庭園', '綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoto_Hanami_Garden.jpg', 0, 30, 0, 0, 10, "徒歩");
+VALUES ('京都花見', '庭園', '綺麗', 0, 8, 'https://www.instagram.com/test_content', '/img/Kyoto_Hanami_Garden.jpg', 0, 30, 0, 0, 10, "徒歩");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -234,7 +234,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '下鴨神社', '綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 1, 00, 0, 0, 40, "電車");
+VALUES ('京都花見', '下鴨神社', '綺麗', 0, 8, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 1, 00, 0, 0, 40, "電車");
 
 INSERT INTO bookmark_content (bookmark_content_name, bookmark_content_address, bookmark_content_comment, bookmark_content_price, bookmark_id, bookmark_instagram_url, bookmark_content_image_path,
 stay_time_h,
@@ -244,7 +244,7 @@ move_time_h,
 move_time_m,
 how_move
 )
-VALUES ('京都花見', '北野天満宮', '花が綺麗', 0, 7, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 0, 30, 0, 0, 10, "徒歩");
+VALUES ('京都花見', '北野天満宮', '花が綺麗', 0, 8, 'https://www.instagram.com/test_content', '/img/Kyoto.jpg', 0, 30, 0, 0, 10, "徒歩");
 
 -- しおり内コンテンツの画像を追加
 -- INSERT INTO bookmark_content_image (bookmark_content_image_path, bookmark_content_id)

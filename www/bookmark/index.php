@@ -53,6 +53,7 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>しおり</title>
     <!-- BootStrap -->
+    <link rel="shortcut icon" href="/img/ashiato.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
@@ -62,9 +63,7 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/bookmark.css" />
-    <link rel="stylesheet" href="/css/okamotobookmark.css" />
     <script src="/js/main.js"></script>
-    <script src="/js/okamoto.js"></script>
 </head>
 
 <body>

@@ -3,11 +3,11 @@
         <div class="place-item w-100">
             <div class="content-header">
                 <h2 class="contentname">
-                    <?= htmlspecialchars($card["bookmark_content_name"]) ?>
+                    <?= htmlspecialchars($card["bookmark_content_name"]); ?>
                 </h2>
                 <img class="contentimg" src="<?= $card["bookmark_content_image_path"] ?>" alt="画像">
                 <div class="contentcoment">
-                    <?= htmlspecialchars($card["bookmark_content_comment"]) ?>
+                    <?= htmlspecialchars($card["bookmark_content_comment"]); ?>
                 </div>
             </div>
             <div class="content-body">
@@ -20,7 +20,7 @@
                         <div class="<?= $i < (count($cards) - 1) ? "arrow" : "" ?>"></div>
                     </div>
                     <div class="right w-50 text-center">
-                        <div class="transportation"><?= htmlspecialchars($card["how_move"])?></div>
+                        <div class="transportation"><?= htmlspecialchars($card["how_move"]); ?></div>
                         <div class="moving-time">移動時間：<?= $card["move_time_h"] ?>時間<?= $card["move_time_m"] ?>分</div>
                         <div class="fee">交通費：<?= $card["used_money"] ?>円</div>
                     </div>

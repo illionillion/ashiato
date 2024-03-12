@@ -73,10 +73,10 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
         $header->render();
         ?>
         <h1 class="text-center text-dark">
-            <?= $currentBookmark["bookmark_name"] ?>
+            <?= htmlspecialchars($currentBookmark["bookmark_name"]); ?>
         </h1>
         <p class="hashtag text-center text-black">
-            <?= $currentBookmark["bookmark_description"] ?>
+            <?= htmlspecialchars($currentBookmark["bookmark_description"]); ?>
         </p>
         <?php
         $cards = new Cards($currentBookmark["bookmark_id"]);

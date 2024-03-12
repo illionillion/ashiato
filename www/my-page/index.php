@@ -62,13 +62,13 @@ try {
                     $carousel->render();
                     ?>
                     <h2 class="asiatoname">
-                        <?= $value["bookmark_name"] ?>
+                        <?= htmlspecialchars($value["bookmark_name"]); ?>
                     </h2>
                     <p class="name">投稿者：
-                        <?= $value["user_name"] ?>
+                        <?= htmlspecialchars($value["user_name"]); ?>
                     </p>
                     <p class="asiato-desc">概要：
-                        <?= $value["bookmark_description"] ?>
+                        <?= htmlspecialchars($value["bookmark_description"]); ?>
                     </p>
                 </a>
             </div>

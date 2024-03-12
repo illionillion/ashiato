@@ -10,7 +10,7 @@
             </button>
         </form>
         <div class="user-control d-flex row justify-content-center align-items-center gap-1">
-            <div class="user-name-display text-end"><?= $_SESSION["user_name"] ?></div>
+            <div class="user-name-display text-end"><?= htmlspecialchars($_SESSION["user_name"]); ?></div>
             <div class="text-end">
                 <a href="/api/signout" class="btn btn-secondary">ログアウト</a>
             </div>

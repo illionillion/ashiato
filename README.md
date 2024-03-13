@@ -4,6 +4,8 @@
 
 旅のしおりを作成して共有できるサービスで、旅行プランを計画しやすくなります。
 
+[プレゼン資料](https://doshishaacjp-my.sharepoint.com/:p:/g/personal/cgeh0721_mail3_doshisha_ac_jp/EWg5RFWwLphBkfy-QGMIKX8BuoYrBHNq6zo7aKNiPKt6Nw?e=dRNraJ)
+
 ## 環境構築
 
 `.env`ファイルに以下を記述

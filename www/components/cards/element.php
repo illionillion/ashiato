@@ -1,4 +1,4 @@
-<?php if (isset($this->cards) && !empty($this->cards)): ?>
+<?php if (isset($cards) && !empty($cards)): ?>
     <?php foreach ($cards as $i => $card): ?>
         <div class="place-item w-100">
             <div class="content-header">

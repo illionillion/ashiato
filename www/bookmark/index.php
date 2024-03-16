@@ -30,11 +30,11 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
         $bookmarkQuery->bindParam(':bookmark_id', $id, PDO::PARAM_STR);
         $bookmarkQuery->execute();
         $bookmarkResult = $bookmarkQuery->fetchAll(PDO::FETCH_ASSOC);
-        $currentBookmark = $bookmarkResult[0];
         if (count($bookmarkResult) == 0) {
-            echo "しおりが見つかりませんでした";
+            // echo "しおりが見つかりませんでした";
+        } else {
+            $currentBookmark = $bookmarkResult[0];
         }
-
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
@@ -54,11 +54,8 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
     <title>しおり</title>
     <!-- BootStrap -->
     <link rel="shortcut icon" href="/img/ashiato.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
@@ -72,16 +69,22 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
         $header = new Header();
         $header->render();
         ?>
-        <h1 class="text-center text-dark">
-            <?= htmlspecialchars($currentBookmark["bookmark_name"]); ?>
-        </h1>
-        <p class="hashtag text-center text-black">
-            <?= htmlspecialchars($currentBookmark["bookmark_description"]); ?>
-        </p>
-        <?php
-        $cards = new Cards($currentBookmark["bookmark_id"]);
-        $cards->render();
-        ?>
+        <?php if (isset($currentBookmark) && !empty($currentBookmark)) : ?>
+            <h1 class="text-center text-dark">
+                <?= htmlspecialchars($currentBookmark["bookmark_name"]); ?>
+            </h1>
+            <p class="hashtag text-center text-black">
+                <?= htmlspecialchars($currentBookmark["bookmark_description"]); ?>
+            </p>
+            <?php
+            $cards = new Cards($currentBookmark["bookmark_id"]);
+            $cards->render();
+            ?>
+        <?php else: ?>
+            <div class="w-100 h-100">
+                <h1>投稿がありません</h1>
+            </div>
+        <?php endif; ?>
         <?php
         $header = new Footer();
         $header->render();
